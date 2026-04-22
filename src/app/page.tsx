@@ -14,16 +14,16 @@ export default function Home() {
   return (
     <>
       <section className="grain border-b border-[#1E293B]">
-        <div className="mx-auto flex w-full max-w-7xl flex-col gap-16 px-6 py-24 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12 lg:py-32">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-6 py-20 sm:gap-16 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12 lg:py-32">
           <div className="max-w-3xl space-y-9 lg:max-w-[47rem]">
             <span className="eyebrow-chip rounded-full px-4 py-1.5 text-sm font-medium tracking-[0.18em] uppercase">
               Automation-first QA services
             </span>
             <div className="space-y-7">
-              <h1 className="headline-balance max-w-5xl font-display text-5xl leading-[1.01] font-semibold tracking-tight text-sand sm:text-6xl lg:text-[5.25rem]">
+              <h1 className="headline-balance max-w-5xl font-display text-4xl leading-[1.02] font-semibold tracking-tight text-sand sm:text-5xl lg:text-[5.25rem]">
                 Release confidence for teams shipping at real product speed.
               </h1>
-              <p className="copy-balance max-w-3xl text-lg leading-8 text-muted sm:text-[1.2rem] sm:leading-9">
+              <p className="copy-balance max-w-3xl text-base leading-7 text-muted sm:text-[1.2rem] sm:leading-9">
                 SmartQA builds the automation systems, quality workflows, and
                 reporting visibility that growing software teams need to ship
                 faster without normalizing risk.
@@ -44,23 +44,23 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="surface-card-strong w-full max-w-[33rem] rounded-[2.5rem] p-7 sm:p-8">
+          <div className="surface-card-strong w-full max-w-[33rem] rounded-[2rem] p-5 sm:rounded-[2.5rem] sm:p-8">
             <div className="grid gap-4 sm:grid-cols-2">
               {companyStats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="hero-stat rounded-[1.75rem] p-6"
+                  className="hero-stat rounded-[1.5rem] p-5 sm:rounded-[1.75rem] sm:p-6"
                 >
                   <div className="text-[2rem] font-display font-semibold tracking-tight text-[#38BDF8]">
                     {stat.value}
                   </div>
-                  <div className="mt-3 max-w-[10rem] text-sm leading-6 text-muted">
+                  <div className="mt-3 max-w-none text-sm leading-6 text-muted sm:max-w-[10rem]">
                     {stat.label}
                   </div>
                 </div>
               ))}
             </div>
-            <div className="surface-accent-card mt-6 rounded-[2rem] p-6">
+            <div className="surface-accent-card mt-6 rounded-[1.5rem] p-5 sm:rounded-[2rem] sm:p-6">
               <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
                 SmartQA Autopilot
               </p>
@@ -100,7 +100,7 @@ export default function Home() {
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
-              className="surface-card group rounded-[2.25rem] p-8 transition hover:-translate-y-1 hover:border-accent/25"
+              className="surface-card group rounded-[2rem] p-6 transition hover:-translate-y-1 hover:border-accent/25 sm:rounded-[2.25rem] sm:p-8"
             >
               <p className="text-sm font-semibold tracking-[0.16em] text-accent uppercase">
                 {service.shortLabel}
@@ -135,7 +135,7 @@ export default function Home() {
               {autopilotSteps.map((step, index) => (
                 <div
                   key={step.title}
-                  className="surface-card-soft rounded-[1.85rem] p-6"
+                  className="surface-card-soft rounded-[1.6rem] p-5 sm:rounded-[1.85rem] sm:p-6"
                 >
                   <div className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
                     0{index + 1}
@@ -149,15 +149,15 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="surface-accent-card rounded-[2.25rem] p-8 sm:p-9">
-              <h3 className="font-display text-3xl font-semibold text-sand">
+            <div className="surface-accent-card rounded-[2rem] p-6 sm:rounded-[2.25rem] sm:p-9">
+              <h3 className="font-display text-2xl font-semibold text-sand sm:text-3xl">
                 Why teams ask about it
               </h3>
               <div className="mt-6 space-y-4">
                 {autopilotBenefits.map((benefit) => (
                   <div
                     key={benefit.title}
-                    className="surface-card-soft rounded-[1.5rem] p-5"
+                    className="surface-card-soft rounded-[1.35rem] p-5 sm:rounded-[1.5rem]"
                   >
                     <p className="text-base font-semibold text-sand">
                       {benefit.title}
@@ -183,7 +183,7 @@ export default function Home() {
           {differentiators.map((item) => (
             <div
               key={item.title}
-              className="surface-card rounded-[1.9rem] p-7"
+              className="surface-card rounded-[1.7rem] p-6 sm:rounded-[1.9rem] sm:p-7"
             >
               <h3 className="text-xl font-semibold text-sand">{item.title}</h3>
               <p className="mt-3 text-sm leading-6 text-muted">{item.description}</p>
@@ -203,10 +203,10 @@ export default function Home() {
             {audienceSegments.map((segment) => (
               <div
                 key={segment.slug}
-                className="surface-card rounded-[2.25rem] p-8"
+                className="surface-card rounded-[2rem] p-6 sm:rounded-[2.25rem] sm:p-8"
               >
-                <div className="flex items-center justify-between gap-4">
-                  <h3 className="font-display text-3xl font-semibold tracking-tight text-sand">
+                <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center sm:gap-4">
+                  <h3 className="font-display text-2xl font-semibold tracking-tight text-sand sm:text-3xl">
                     {segment.title}
                   </h3>
                   <span className="eyebrow-chip rounded-full px-3 py-1 text-xs font-semibold tracking-[0.14em] uppercase">
@@ -240,7 +240,7 @@ export default function Home() {
             <Link
               key={post.slug}
               href={`/insights/${post.slug}`}
-              className="surface-card rounded-[1.9rem] p-7 transition hover:-translate-y-1 hover:border-accent/25"
+              className="surface-card rounded-[1.7rem] p-6 transition hover:-translate-y-1 hover:border-accent/25 sm:rounded-[1.9rem] sm:p-7"
             >
               <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">
                 {post.category}
@@ -260,7 +260,7 @@ export default function Home() {
             <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
               Start with the highest-leverage next step
             </p>
-            <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight text-sand sm:text-5xl">
+            <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-sand sm:text-5xl">
               Book a consultation and map the QA bottleneck that is actually slowing releases.
             </h2>
           </div>

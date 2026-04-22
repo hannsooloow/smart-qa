@@ -1,14 +1,22 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { contactDetails, navItems, serviceNavItems } from "@/lib/site-data";
 
 export function SiteShell({ children }: { children: ReactNode }) {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  function closeMobileNav() {
+    setMobileNavOpen(false);
+  }
+
   return (
     <div className="relative flex min-h-screen flex-col">
       <header className="sticky top-0 z-20 border-b border-[#1E293B] bg-[#0B1220]/78 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4 sm:px-8 lg:px-12">
-          <Link href="/" className="flex items-center">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 sm:px-8 lg:px-12">
+          <Link href="/" className="flex items-center" onClick={closeMobileNav}>
             <Image
               src="/smartqa-logo-circle.svg"
               alt="SmartQA logo"
@@ -19,7 +27,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
             />
           </Link>
 
-          <nav className="flex flex-wrap items-center gap-x-7 gap-y-2 text-sm">
+          <nav className="hidden items-center gap-x-7 gap-y-2 text-base lg:flex xl:text-lg">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href} className="site-nav-link">
                 {item.label}
@@ -27,13 +35,57 @@ export function SiteShell({ children }: { children: ReactNode }) {
             ))}
           </nav>
 
-          <Link
-            href="/contact"
-            className="btn-primary inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition"
-          >
-            Let's Talk
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/contact"
+              className="btn-primary hidden items-center justify-center rounded-full px-5 py-2.5 text-base font-semibold transition sm:inline-flex"
+            >
+              Let's Talk
+            </Link>
+            <button
+              type="button"
+              aria-expanded={mobileNavOpen}
+              aria-controls="mobile-nav"
+              aria-label="Toggle navigation"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#334155] text-sand transition hover:bg-[#1E293B] lg:hidden"
+              onClick={() => setMobileNavOpen((current) => !current)}
+            >
+              <span className="sr-only">Menu</span>
+              <div className="flex flex-col gap-1.5">
+                <span className="block h-0.5 w-5 rounded-full bg-current" />
+                <span className="block h-0.5 w-5 rounded-full bg-current" />
+                <span className="block h-0.5 w-5 rounded-full bg-current" />
+              </div>
+            </button>
+          </div>
         </div>
+
+        {mobileNavOpen ? (
+          <div className="border-t border-[#1E293B] lg:hidden">
+            <nav
+              id="mobile-nav"
+              className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-5 text-base sm:px-8"
+            >
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="site-nav-link rounded-2xl px-4 py-3"
+                  onClick={closeMobileNav}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Link
+                href="/contact"
+                className="btn-primary mt-2 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-semibold transition sm:hidden"
+                onClick={closeMobileNav}
+              >
+                Let's Talk
+              </Link>
+            </nav>
+          </div>
+        ) : null}
       </header>
 
       <main className="relative z-10 flex-1">{children}</main>
@@ -105,10 +157,10 @@ export function SectionHeading({
       <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
         {eyebrow}
       </p>
-      <h2 className="headline-balance mt-4 max-w-4xl font-display text-4xl font-semibold tracking-tight text-sand sm:text-5xl">
+      <h2 className="headline-balance mt-4 max-w-4xl font-display text-3xl font-semibold tracking-tight text-sand sm:text-4xl lg:text-5xl">
         {title}
       </h2>
-      <p className="copy-balance mt-6 max-w-2xl text-lg leading-8 text-muted">
+      <p className="copy-balance mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
         {description}
       </p>
     </div>
@@ -130,14 +182,14 @@ export function PageHero({
 }) {
   return (
     <section className="grain border-b border-[#111827]">
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-32">
         <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
           {eyebrow}
         </p>
-        <h1 className="headline-balance mt-5 max-w-5xl font-display text-5xl font-semibold tracking-tight text-sand sm:text-6xl lg:text-[4.5rem] lg:leading-[1.02]">
+        <h1 className="headline-balance mt-5 max-w-5xl font-display text-4xl font-semibold tracking-tight text-sand sm:text-5xl lg:text-[4.5rem] lg:leading-[1.02]">
           {title}
         </h1>
-        <p className="copy-balance mt-7 max-w-3xl text-lg leading-8 text-muted sm:text-[1.15rem]">
+        <p className="copy-balance mt-7 max-w-3xl text-base leading-7 text-muted sm:text-[1.15rem] sm:leading-8">
           {description}
         </p>
         {(primaryCta || secondaryCta) && (
