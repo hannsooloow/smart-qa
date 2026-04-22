@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SmartQA Website
 
-## Getting Started
+SmartQA is a service-led marketing website for a QA automation company focused on automation services, QA consulting, CI/CD quality integration, performance and reliability, and SmartQA Autopilot.
 
-First, run the development server:
+## Current implementation
+
+- Next.js App Router with TypeScript
+- Tailwind CSS v4 styling
+- Shared marketing shell with branded navigation and footer
+- Core routes: Home, Services, SmartQA Autopilot, Use Cases, Insights, About, Contact
+- Dynamic service detail pages
+- Dynamic insight article pages
+- Basic contact API route and client form flow
+
+## Development
+
+Run the local development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production validation:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Lint the project:
 
-## Learn More
+```bash
+npm run lint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Content and positioning direction
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Primary conversion goal: book a consultation
+- Market posture: service-led website with productized-service narrative
+- SmartQA Autopilot positioning: platform-backed managed service today, future SaaS product over time
+- Audience focus: startups, scaleups, agencies, and enterprise teams
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Next recommended implementation steps
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Add booking integration for the primary consultation CTA
+- Connect the contact API route to email and CRM integrations
+- Add sitemap, robots, and schema metadata
+- Replace placeholder trust sections with testimonials, case studies, and sample reporting artifacts
+- Expand insights with additional service-led SEO content
