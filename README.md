@@ -14,10 +14,16 @@ SmartQA is a service-led marketing website for a QA automation company focused o
 
 ## Development
 
-Run the local development server:
+Run the local development server and open the site automatically:
 
 ```bash
 npm run dev
+```
+
+If you only want the raw Next.js server without auto-opening a browser:
+
+```bash
+npm run dev:server
 ```
 
 Production validation:

@@ -12,6 +12,18 @@
 			"isBackground": true,
 			"problemMatcher": [],
 			"group": "build"
+		},
+		{
+			"label": "SmartQA: dev server only",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"dev:server"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
 		}
 	]
 }
