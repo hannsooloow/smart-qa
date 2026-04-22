@@ -2,15 +2,29 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, type ReactNode } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { contactDetails, navItems, serviceNavItems } from "@/lib/site-data";
 
 export function SiteShell({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+  const mainRef = useRef<HTMLElement>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   function closeMobileNav() {
     setMobileNavOpen(false);
   }
+
+  useEffect(() => {
+    closeMobileNav();
+
+    const frameId = window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      mainRef.current?.focus({ preventScroll: true });
+    });
+
+    return () => window.cancelAnimationFrame(frameId);
+  }, [pathname]);
 
   return (
     <div className="relative flex min-h-screen flex-col">
@@ -88,7 +102,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
         ) : null}
       </header>
 
-      <main className="relative z-10 flex-1">{children}</main>
+      <main ref={mainRef} tabIndex={-1} className="relative z-10 flex-1 outline-none">
+        {children}
+      </main>
 
       <footer className="border-t border-[#1E293B] bg-[#0B1220]">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 sm:px-8 lg:grid-cols-[1.4fr_0.8fr_0.8fr] lg:px-12">
@@ -181,8 +197,8 @@ export function PageHero({
   secondaryCta?: { href: string; label: string };
 }) {
   return (
-    <section className="grain border-b border-[#111827]">
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12 lg:py-20 xl:py-24">
+    <section className="grain flex min-h-[calc(100svh-88px)] items-center border-b border-[#111827]">
+      <div className="mx-auto w-full max-w-7xl px-6 py-14 sm:px-8 lg:px-12 lg:py-16 xl:py-20">
         <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
           {eyebrow}
         </p>

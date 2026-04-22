@@ -13,8 +13,8 @@ import {
 export default function Home() {
   return (
     <>
-      <section className="grain border-b border-[#1E293B]">
-        <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-16 sm:gap-14 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12 lg:py-20 xl:py-24">
+      <section className="grain flex min-h-[calc(100svh-88px)] items-center border-b border-[#1E293B]">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-14 sm:gap-14 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12 lg:py-16 xl:py-20">
           <div className="max-w-3xl space-y-7 lg:max-w-[40rem] xl:max-w-[44rem]">
             <span className="eyebrow-chip rounded-full px-4 py-1.5 text-sm font-medium tracking-[0.18em] uppercase">
               Automation-first QA services
