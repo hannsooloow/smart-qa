@@ -19,26 +19,26 @@ export default function ServicesPage() {
         secondaryCta={{ href: "/autopilot", label: "See SmartQA Autopilot" }}
       />
 
-      <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
         <SectionHeading
           eyebrow="Service lines"
           title="Choose the engagement that fits the current bottleneck."
           description="Some teams need foundational strategy. Others need pipeline integration or scalable automation coverage. The structure below makes each offer legible to technical buyers."
         />
-        <div className="mt-12 grid gap-7 lg:grid-cols-2">
+        <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {services.map((service) => (
             <div
               key={service.slug}
-              className="surface-card rounded-[2.25rem] p-8"
+              className="surface-card rounded-[1.9rem] p-6 sm:rounded-[2.1rem] sm:p-7"
             >
               <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
                 {service.shortLabel}
               </p>
-              <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-sand">
+              <h2 className="mt-3 font-display text-[1.9rem] font-semibold tracking-tight text-sand sm:text-[2.1rem]">
                 {service.title}
               </h2>
-              <p className="mt-4 text-base leading-8 text-muted">{service.summary}</p>
-              <div className="mt-6 space-y-3 text-sm text-muted">
+              <p className="mt-3 text-[0.98rem] leading-7 text-muted sm:text-base">{service.summary}</p>
+              <div className="mt-5 space-y-2.5 text-sm text-muted">
                 {service.situations.map((situation) => (
                   <div
                     key={situation}
@@ -50,7 +50,7 @@ export default function ServicesPage() {
               </div>
               <Link
                 href={`/services/${service.slug}`}
-                className="btn-secondary mt-6 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-sand transition"
+                className="btn-secondary mt-5 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-sand transition"
               >
                 Review service details
               </Link>

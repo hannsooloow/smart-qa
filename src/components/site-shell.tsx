@@ -27,7 +27,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
             />
           </Link>
 
-          <nav className="hidden items-center gap-x-7 gap-y-2 text-base lg:flex xl:text-lg">
+          <nav className="hidden items-center gap-x-6 gap-y-2 text-[0.95rem] lg:flex xl:text-base">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href} className="site-nav-link">
                 {item.label}
@@ -38,7 +38,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="btn-primary hidden items-center justify-center rounded-full px-5 py-2.5 text-base font-semibold transition sm:inline-flex"
+              className="btn-primary hidden items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition sm:inline-flex"
             >
               Let's Talk
             </Link>
@@ -157,7 +157,7 @@ export function SectionHeading({
       <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
         {eyebrow}
       </p>
-      <h2 className="headline-balance mt-4 max-w-4xl font-display text-3xl font-semibold tracking-tight text-sand sm:text-4xl lg:text-5xl">
+      <h2 className="headline-balance mt-4 max-w-4xl font-display text-3xl font-semibold tracking-tight text-sand sm:text-4xl lg:text-[2.85rem] lg:leading-[1.08] xl:text-[3.35rem]">
         {title}
       </h2>
       <p className="copy-balance mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
@@ -182,11 +182,11 @@ export function PageHero({
 }) {
   return (
     <section className="grain border-b border-[#111827]">
-      <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12 lg:py-20 xl:py-24">
         <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
           {eyebrow}
         </p>
-        <h1 className="headline-balance mt-5 max-w-5xl font-display text-4xl font-semibold tracking-tight text-sand sm:text-5xl lg:text-[4.5rem] lg:leading-[1.02]">
+        <h1 className="headline-balance mt-5 max-w-5xl font-display text-4xl font-semibold tracking-tight text-sand sm:text-5xl lg:text-[3.85rem] lg:leading-[1.04] xl:text-[4.25rem]">
           {title}
         </h1>
         <p className="copy-balance mt-7 max-w-3xl text-base leading-7 text-muted sm:text-[1.15rem] sm:leading-8">
