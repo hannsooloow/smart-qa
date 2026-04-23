@@ -1,0 +1,52 @@
+<svg viewBox="0 0 520 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="whyGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <path d="M92 44C130 80 130 158 92 196" stroke="#7F1D1D" stroke-width="2" fill="none" stroke-dasharray="6 9"/>
+  <path d="M428 44C390 80 390 158 428 196" stroke="#0F766E" stroke-width="2" fill="none" stroke-dasharray="6 9"/>
+
+  <g transform="translate(136 40)">
+    <circle cx="0" cy="20" r="9" fill="#0F172A" stroke="#FB7185" stroke-width="1.5"/>
+    <line x1="-4" y1="16" x2="4" y2="24" stroke="#FB7185" stroke-width="1.6"/>
+    <line x1="4" y1="16" x2="-4" y2="24" stroke="#FB7185" stroke-width="1.6"/>
+    <rect x="24" y="14" width="98" height="12" rx="6" fill="#3b2130"/>
+    <rect x="24" y="58" width="116" height="12" rx="6" fill="#3b2130"/>
+    <rect x="24" y="102" width="108" height="12" rx="6" fill="#3b2130"/>
+    <rect x="24" y="146" width="88" height="12" rx="6" fill="#3b2130"/>
+    <circle cx="0" cy="64" r="9" fill="#0F172A" stroke="#FB7185" stroke-width="1.5"/>
+    <line x1="-4" y1="60" x2="4" y2="68" stroke="#FB7185" stroke-width="1.6"/>
+    <line x1="4" y1="60" x2="-4" y2="68" stroke="#FB7185" stroke-width="1.6"/>
+    <circle cx="0" cy="108" r="9" fill="#0F172A" stroke="#FB7185" stroke-width="1.5"/>
+    <line x1="-4" y1="104" x2="4" y2="112" stroke="#FB7185" stroke-width="1.6"/>
+    <line x1="4" y1="104" x2="-4" y2="112" stroke="#FB7185" stroke-width="1.6"/>
+    <circle cx="0" cy="152" r="9" fill="#0F172A" stroke="#FB7185" stroke-width="1.5"/>
+    <line x1="-4" y1="148" x2="4" y2="156" stroke="#FB7185" stroke-width="1.6"/>
+    <line x1="4" y1="148" x2="-4" y2="156" stroke="#FB7185" stroke-width="1.6"/>
+  </g>
+
+  <g transform="translate(384 40)">
+    <circle cx="0" cy="20" r="9" fill="#0F172A" stroke="#2DD4BF" stroke-width="1.5"/>
+    <polyline points="-4,20 -1,23 5,15" stroke="#2DD4BF" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <rect x="24" y="14" width="98" height="12" rx="6" fill="#16352f"/>
+    <rect x="24" y="58" width="116" height="12" rx="6" fill="#16352f"/>
+    <rect x="24" y="102" width="108" height="12" rx="6" fill="#16352f"/>
+    <rect x="24" y="146" width="88" height="12" rx="6" fill="#16352f"/>
+    <circle cx="0" cy="64" r="9" fill="#0F172A" stroke="#2DD4BF" stroke-width="1.5"/>
+    <polyline points="-4,64 -1,67 5,59" stroke="#2DD4BF" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <circle cx="0" cy="108" r="9" fill="#0F172A" stroke="#2DD4BF" stroke-width="1.5"/>
+    <polyline points="-4,108 -1,111 5,103" stroke="#2DD4BF" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <circle cx="0" cy="152" r="9" fill="#0F172A" stroke="#2DD4BF" stroke-width="1.5"/>
+    <polyline points="-4,152 -1,155 5,147" stroke="#2DD4BF" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <circle cx="260" cy="120" r="28" fill="#0E1E33" stroke="#334155" stroke-width="2"/>
+  <circle cx="260" cy="120" r="28" fill="none" stroke="#2DD4BF" stroke-width="1" stroke-dasharray="10 7" opacity="0.35"/>
+  <path d="M250 120l8 8 16-18" stroke="#E2E8F0" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#whyGlow)"/>
+</svg>

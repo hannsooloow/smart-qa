@@ -1,0 +1,17 @@
+
+> smart-qa@0.1.0 dev
+> node scripts/dev-open.mjs
+
+Starting SmartQA dev server on http://localhost:3005 ...
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3005
+- Network:       http://192.168.18.2:3005
+✓ Ready in 847ms
+
+ GET / 200 in 1424ms (next.js: 855ms, application-code: 570ms)
+ GET / 200 in 1054ms (next.js: 919ms, application-code: 135ms)
+SmartQA is ready at http://localhost:3005 . Opening browser...
+ GET / 200 in 127ms (next.js: 6ms, application-code: 121ms)
+ GET / 200 in 282ms (next.js: 4ms, application-code: 278ms)
+ GET / 200 in 181ms (next.js: 9ms, application-code: 172ms)
+ GET / 200 in 140ms (next.js: 4ms, application-code: 136ms)

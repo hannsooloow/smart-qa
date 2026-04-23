@@ -1,10 +1,9 @@
 import { spawn } from "node:child_process";
+import { resolve } from "node:path";
 
 const port = process.env.PORT ?? "3000";
 const url = `http://localhost:${port}`;
-const nextBinary = process.platform === "win32"
-  ? "node_modules\\.bin\\next.cmd"
-  : "node_modules/.bin/next";
+const nextCli = resolve("node_modules", "next", "dist", "bin", "next");
 
 let nextProcess;
 let isShuttingDown = false;
@@ -26,23 +25,34 @@ async function isServerReachable(targetUrl) {
 }
 
 function openBrowser(targetUrl) {
-  if (process.platform === "win32") {
-    const browserProcess = spawn("cmd", ["/c", "start", "", targetUrl], {
+  try {
+    if (process.platform === "win32") {
+      const browserProcess = spawn("cmd.exe", ["/c", "start", "", targetUrl], {
+        detached: true,
+        stdio: "ignore",
+        windowsVerbatimArguments: true,
+      });
+
+      browserProcess.on("error", () => {
+        console.warn(`SmartQA is ready at ${targetUrl}. Open it manually in your browser.`);
+      });
+      browserProcess.unref();
+      return;
+    }
+
+    const command = process.platform === "darwin" ? "open" : "xdg-open";
+    const browserProcess = spawn(command, [targetUrl], {
       detached: true,
       stdio: "ignore",
     });
 
+    browserProcess.on("error", () => {
+      console.warn(`SmartQA is ready at ${targetUrl}. Open it manually in your browser.`);
+    });
     browserProcess.unref();
-    return;
+  } catch {
+    console.warn(`SmartQA is ready at ${targetUrl}. Open it manually in your browser.`);
   }
-
-  const command = process.platform === "darwin" ? "open" : "xdg-open";
-  const browserProcess = spawn(command, [targetUrl], {
-    detached: true,
-    stdio: "ignore",
-  });
-
-  browserProcess.unref();
 }
 
 function shutdown(signal) {
@@ -69,9 +79,15 @@ async function main() {
 
   console.log(`Starting SmartQA dev server on ${url}...`);
 
-  nextProcess = spawn(nextBinary, ["dev", "--port", port], {
+  nextProcess = spawn(process.execPath, [nextCli, "dev", "--port", port], {
     stdio: "inherit",
     env: process.env,
+  });
+
+  nextProcess.on("error", (error) => {
+    console.error("Unable to start SmartQA dev server.");
+    console.error(error);
+    shutdown("SIGTERM");
   });
 
   nextProcess.on("exit", (code, signal) => {

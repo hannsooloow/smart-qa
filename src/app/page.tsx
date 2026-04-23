@@ -1,21 +1,30 @@
+import Image from "next/image";
 import Link from "next/link";
+import { HeroVisualFrame } from "@/components/HeroVisualFrame";
+import { HeroVisual } from "@/components/hero-visual";
 import { SectionHeading } from "@/components/site-shell";
 import {
   audienceSegments,
   autopilotBenefits,
   autopilotSteps,
-  companyStats,
   differentiators,
   insightPosts,
   services,
 } from "@/lib/site-data";
 
+const serviceVisuals: Record<string, string> = {
+  "automation-qa": "/service-icon-automation.svg",
+  "qa-consulting": "/service-icon-consulting.svg",
+  "cicd-quality-integration": "/service-icon-cicd.svg",
+  "performance-reliability": "/service-icon-performance.svg",
+};
+
 export default function Home() {
   return (
     <>
       <section className="grain flex min-h-[calc(100svh-88px)] items-center border-b border-[#1E293B]">
-        <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-14 sm:gap-14 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12 lg:py-16 xl:py-20">
-          <div className="max-w-3xl space-y-7 lg:max-w-[40rem] xl:max-w-[44rem]">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-14 sm:gap-14 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:gap-16 lg:px-12 lg:py-16 xl:gap-20 xl:py-20">
+          <div className="max-w-3xl space-y-7 lg:basis-[56%] lg:max-w-[44rem] xl:max-w-[46rem]">
             <span className="eyebrow-chip rounded-full px-4 py-1.5 text-sm font-medium tracking-[0.18em] uppercase">
               Automation-first QA services
             </span>
@@ -44,45 +53,23 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="surface-card-strong w-full max-w-[29rem] rounded-[2rem] p-5 sm:rounded-[2.25rem] sm:p-6 xl:max-w-[31rem]">
-            <div className="grid gap-3 sm:grid-cols-2">
-              {companyStats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="hero-stat rounded-[1.35rem] p-4 sm:rounded-[1.5rem] sm:p-5"
-                >
-                  <div className="text-[1.8rem] font-display font-semibold tracking-tight text-[#38BDF8] sm:text-[1.95rem]">
-                    {stat.value}
-                  </div>
-                  <div className="mt-3 max-w-none text-sm leading-6 text-muted sm:max-w-[10rem]">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="surface-accent-card mt-4 rounded-[1.5rem] p-5 sm:mt-5 sm:rounded-[1.75rem] sm:p-6">
-              <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
-                SmartQA Autopilot
-              </p>
-              <p className="mt-3 text-base leading-7 text-sand sm:text-lg sm:leading-8">
-                A managed QA system that analyzes application flows, generates
-                scenario candidates, runs tests, heals common breakages, and
-                returns evidence-rich reporting.
-              </p>
-            </div>
+          <div className="w-full lg:-ml-8 lg:basis-[60%] lg:-translate-y-8 xl:-ml-12 xl:max-w-[64rem]">
+            <HeroVisualFrame>
+              <HeroVisual className="w-full" />
+            </HeroVisualFrame>
           </div>
         </div>
       </section>
 
       <section className="section-wash border-b border-[#1E293B]">
-        <div className="mx-auto grid max-w-7xl gap-5 px-6 py-10 text-sm text-muted sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:px-12">
+        <div className="mx-auto flex max-w-7xl flex-wrap gap-3 px-6 py-8 text-sm text-muted sm:px-8 sm:py-10 lg:px-12">
           {[
             "Reduce manual regression bottlenecks",
             "Stabilize release pipelines and quality gates",
             "Make automation assets reusable across teams",
             "Turn QA reporting into decision-ready evidence",
           ].map((item) => (
-            <div key={item} className="surface-card-soft rounded-[1.5rem] px-5 py-4">
+            <div key={item} className="proof-pill rounded-full px-5 py-3.5">
               {item}
             </div>
           ))}
@@ -95,13 +82,22 @@ export default function Home() {
           title="SmartQA sells operating leverage, not generic test execution."
           description="Each engagement is designed to remove a real quality bottleneck and leave the client with stronger systems, not just a backlog of test cases."
         />
-        <div className="mt-10 grid gap-6 lg:grid-cols-2">
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {services.map((service) => (
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
               className="surface-card group rounded-[1.8rem] p-5 transition hover:-translate-y-1 hover:border-accent/25 sm:rounded-[2rem] sm:p-6"
             >
+              <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-[1.4rem] bg-[#0B1220]/78">
+                <Image
+                  src={serviceVisuals[service.slug]}
+                  alt=""
+                  width={96}
+                  height={96}
+                  className="h-auto w-full max-w-[5rem] object-contain"
+                />
+              </div>
               <p className="text-sm font-semibold tracking-[0.16em] text-accent uppercase">
                 {service.shortLabel}
               </p>
@@ -130,7 +126,29 @@ export default function Home() {
             title="A premium managed QA engine now, a product platform over time."
             description="Autopilot gives SmartQA a differentiated delivery model: intelligent analysis, generated scenarios, execution, healing, and reporting wrapped in a human-guided service."
           />
-          <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="mt-6 flex justify-center lg:mt-8">
+            <div className="w-full max-w-[60rem]">
+              <Image
+                src="/section3-autopilot.svg"
+                alt=""
+                width={1200}
+                height={260}
+                className="h-auto w-full max-w-full object-contain"
+              />
+            </div>
+          </div>
+          <div className="mt-4 flex justify-center lg:mt-5">
+            <div className="w-full max-w-[38rem]">
+              <Image
+                src="/section4-process.svg"
+                alt=""
+                width={700}
+                height={180}
+                className="h-auto w-full max-w-full object-contain"
+              />
+            </div>
+          </div>
+          <div className="mt-10 grid gap-6 lg:mt-12 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="grid gap-5 sm:grid-cols-2">
               {autopilotSteps.map((step, index) => (
                 <div
@@ -174,11 +192,24 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
-        <SectionHeading
-          eyebrow="Why SmartQA"
-          title="Built for technical buyers who care about release stability, not marketing theater."
-          description="The site should make it obvious that SmartQA understands engineering workflows, maintenance reality, and the difference between test quantity and release confidence."
-        />
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
+          <div className="max-w-3xl">
+            <SectionHeading
+              eyebrow="Why SmartQA"
+              title="Built for technical buyers who care about release stability, not marketing theater."
+              description="The site should make it obvious that SmartQA understands engineering workflows, maintenance reality, and the difference between test quantity and release confidence."
+            />
+          </div>
+          <div className="w-full max-w-[28rem] lg:pt-6">
+            <Image
+              src="/section5-why.svg"
+              alt=""
+              width={520}
+              height={240}
+              className="h-auto w-full max-w-full object-contain"
+            />
+          </div>
+        </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {differentiators.map((item) => (
             <div
@@ -255,7 +286,7 @@ export default function Home() {
       </section>
 
       <section className="border-t border-[#1E293B] bg-[#0B1220]">
-        <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-20 sm:px-8 lg:flex-row lg:items-end lg:justify-between lg:px-12 lg:py-24">
+        <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-20 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:gap-14 lg:px-12 lg:py-24">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
               Start with the highest-leverage next step
@@ -263,20 +294,29 @@ export default function Home() {
             <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-sand sm:text-5xl">
               Book a consultation and map the QA bottleneck that is actually slowing releases.
             </h2>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/contact"
+                className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition"
+              >
+                Book a Consultation
+              </Link>
+              <Link
+                href="/services"
+                className="btn-secondary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold text-sand transition"
+              >
+                Review Services
+              </Link>
+            </div>
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/contact"
-              className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition"
-            >
-              Book a Consultation
-            </Link>
-            <Link
-              href="/services"
-              className="btn-secondary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold text-sand transition"
-            >
-              Review Services
-            </Link>
+          <div className="w-full max-w-[22rem] lg:shrink-0">
+            <Image
+              src="/section6-contact.svg"
+              alt=""
+              width={420}
+              height={260}
+              className="h-auto w-full max-w-full object-contain"
+            />
           </div>
         </div>
       </section>

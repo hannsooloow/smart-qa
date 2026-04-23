@@ -59,8 +59,8 @@ a {
 
 .grain {
   background:
-    radial-gradient(circle at 18% 22%, rgba(45, 212, 191, 0.08), transparent 38%),
-    radial-gradient(circle at 82% 0%, rgba(69, 208, 176, 0.08), transparent 34%),
+    radial-gradient(circle at 18% 22%, rgba(45, 212, 191, 0.08), transparent 34%),
+    radial-gradient(circle at 82% 0%, rgba(56, 189, 248, 0.07), transparent 30%),
     #0b1220;
 }
 
@@ -73,31 +73,35 @@ a {
 }
 
 .surface-card {
-  border: 1px solid rgba(71, 85, 105, 0.75);
-  background: #1e293b;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(100, 116, 139, 0.28);
+  background: rgba(15, 23, 42, 0.72);
+  box-shadow: 0 18px 40px rgba(2, 8, 23, 0.2);
+  backdrop-filter: blur(20px);
 }
 
 .surface-card-strong {
-  border: 1px solid rgba(71, 85, 105, 0.8);
-  background: linear-gradient(180deg, rgba(30, 41, 59, 0.96), rgba(15, 23, 42, 0.98));
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(100, 116, 139, 0.34);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.82), rgba(11, 18, 32, 0.94));
+  box-shadow: 0 20px 44px rgba(2, 8, 23, 0.22);
+  backdrop-filter: blur(22px);
 }
 
 .surface-card-soft {
-  border: 1px solid rgba(71, 85, 105, 0.7);
-  background: rgba(30, 41, 59, 0.9);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(100, 116, 139, 0.24);
+  background: rgba(15, 23, 42, 0.58);
+  box-shadow: 0 14px 30px rgba(2, 8, 23, 0.14);
+  backdrop-filter: blur(18px);
 }
 
 .surface-accent-card {
-  border: 1px solid rgba(45, 212, 191, 0.22);
-  background: #0f172a;
-  box-shadow: 0 0 36px rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.16);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.74), rgba(11, 18, 32, 0.92));
+  box-shadow: 0 0 28px rgba(45, 212, 191, 0.05);
+  backdrop-filter: blur(20px);
 }
 
 .section-wash {
-  background: #0f172a;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(11, 18, 32, 0.96));
 }
 
 .eyebrow-chip {
@@ -118,23 +122,30 @@ a {
 }
 
 .btn-secondary {
-  border: 1px solid #475569;
-  background: transparent;
+  border: 1px solid rgba(100, 116, 139, 0.42);
+  background: rgba(15, 23, 42, 0.24);
 }
 
 .btn-secondary:hover {
-  background: #1e293b;
+  background: rgba(15, 23, 42, 0.52);
 }
 
 .tag-pill {
-  border: 1px solid rgba(71, 85, 105, 0.8);
-  background: #1e293b;
+  border: 1px solid rgba(100, 116, 139, 0.26);
+  background: rgba(15, 23, 42, 0.36);
 }
 
 .hero-stat {
   border: 1px solid rgba(71, 85, 105, 0.72);
   background: #24324a;
   box-shadow: none;
+}
+
+.proof-pill {
+  border: 1px solid rgba(100, 116, 139, 0.24);
+  background: rgba(15, 23, 42, 0.34);
+  box-shadow: inset 0 1px 0 rgba(148, 163, 184, 0.04);
+  backdrop-filter: blur(16px);
 }
 
 .site-nav-link {

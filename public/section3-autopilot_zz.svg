@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SmartQA Autopilot flow">
+  <defs>
+    <linearGradient id="autoLine" x1="146" y1="132" x2="1050" y2="132" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2DD4BF"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <filter id="autoGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <pattern id="autoDots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+    <circle cx="14" cy="14" r="1" fill="#334155" fill-opacity="0.28"/>
+  </pattern>
+  <rect width="1200" height="260" fill="url(#autoDots)"/>
+
+  <path d="M146 144C250 144 286 108 366 108C450 108 468 160 570 160C660 160 692 108 790 108C878 108 924 146 1050 146"
+        stroke="#334155" stroke-width="2" fill="none" stroke-dasharray="7 10"/>
+  <path d="M146 132C248 132 284 96 364 96C448 96 470 148 570 148C662 148 696 96 792 96C880 96 926 132 1050 132"
+        stroke="url(#autoLine)" stroke-width="6" fill="none" stroke-linecap="round" filter="url(#autoGlow)"/>
+
+  <g transform="translate(146 82)">
+    <circle cx="0" cy="50" r="44" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="-4" cy="46" r="18" fill="none" stroke="#2DD4BF" stroke-width="3" filter="url(#autoGlow)"/>
+    <line x1="8" y1="58" x2="20" y2="70" stroke="#2DD4BF" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="24" y="24" width="22" height="6" rx="3" fill="#243244"/>
+    <rect x="24" y="38" width="26" height="6" rx="3" fill="#243244"/>
+    <rect x="24" y="52" width="18" height="6" rx="3" fill="#243244"/>
+  </g>
+
+  <g transform="translate(364 46)">
+    <circle cx="0" cy="50" r="44" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+    <path d="M-18 66C-4 42 10 34 26 28" stroke="#2DD4BF" stroke-width="4" fill="none" stroke-linecap="round" filter="url(#autoGlow)"/>
+    <circle cx="-18" cy="66" r="5" fill="#2DD4BF"/>
+    <circle cx="8" cy="44" r="5" fill="#38BDF8"/>
+    <circle cx="26" cy="28" r="5" fill="#2DD4BF"/>
+    <circle cx="-6" cy="18" r="3.5" fill="#38BDF8" fill-opacity="0.8"/>
+  </g>
+
+  <g transform="translate(570 96)">
+    <circle cx="0" cy="50" r="48" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+    <path d="M-18 50l18-18M-18 50l18 18M18 32L0 50M18 68L0 50"
+          stroke="#2DD4BF" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="0" cy="50" r="28" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="5 8"/>
+  </g>
+
+  <g transform="translate(792 46)">
+    <circle cx="0" cy="50" r="44" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+    <path d="M-14 38h8q0-8 8-8t8 8h8v8q8 0 8 8t-8 8v8h-8q0 8-8 8t-8-8h-8v-8q-8 0-8-8t8-8z"
+          fill="none" stroke="#2DD4BF" stroke-width="3" filter="url(#autoGlow)"/>
+  </g>
+
+  <g transform="translate(1050 82)">
+    <circle cx="0" cy="50" r="44" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+    <rect x="-22" y="24" width="44" height="52" rx="8" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+    <rect x="-12" y="36" width="20" height="4" rx="2" fill="#243244"/>
+    <rect x="-12" y="46" width="16" height="4" rx="2" fill="#2DD4BF" fill-opacity="0.65"/>
+    <rect x="-12" y="56" width="20" height="4" rx="2" fill="#243244"/>
+    <rect x="-10" y="66" width="4" height="10" rx="2" fill="#2DD4BF" fill-opacity="0.6"/>
+    <rect x="-2" y="60" width="4" height="16" rx="2" fill="#2DD4BF" fill-opacity="0.85"/>
+    <rect x="6" y="64" width="4" height="12" rx="2" fill="#38BDF8"/>
+  </g>
+
+  <text x="146" y="188" text-anchor="middle" fill="#E6EDF6" font-size="13" font-weight="600" font-family="Inter, system-ui, sans-serif" letter-spacing="0.2">Analyze</text>
+  <text x="146" y="206" text-anchor="middle" fill="#7C93B0" font-size="11" font-weight="500" font-family="Inter, system-ui, sans-serif" opacity="0.92">Understand flows</text>
+
+  <text x="364" y="152" text-anchor="middle" fill="#E6EDF6" font-size="13" font-weight="600" font-family="Inter, system-ui, sans-serif" letter-spacing="0.2">Generate</text>
+  <text x="364" y="170" text-anchor="middle" fill="#7C93B0" font-size="11" font-weight="500" font-family="Inter, system-ui, sans-serif" opacity="0.92">Create scenarios</text>
+
+  <text x="570" y="202" text-anchor="middle" fill="#E6EDF6" font-size="13" font-weight="600" font-family="Inter, system-ui, sans-serif" letter-spacing="0.2">Execute</text>
+  <text x="570" y="220" text-anchor="middle" fill="#7C93B0" font-size="11" font-weight="500" font-family="Inter, system-ui, sans-serif" opacity="0.92">Run everywhere</text>
+
+  <text x="792" y="152" text-anchor="middle" fill="#E6EDF6" font-size="13" font-weight="600" font-family="Inter, system-ui, sans-serif" letter-spacing="0.2">Heal</text>
+  <text x="792" y="170" text-anchor="middle" fill="#7C93B0" font-size="11" font-weight="500" font-family="Inter, system-ui, sans-serif" opacity="0.92">Fix breakages</text>
+
+  <text x="1050" y="188" text-anchor="middle" fill="#E6EDF6" font-size="13" font-weight="600" font-family="Inter, system-ui, sans-serif" letter-spacing="0.2">Report</text>
+  <text x="1050" y="206" text-anchor="middle" fill="#7C93B0" font-size="11" font-weight="500" font-family="Inter, system-ui, sans-serif" opacity="0.92">Deliver insights</text>
+</svg>

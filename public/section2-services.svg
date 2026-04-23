@@ -1,0 +1,71 @@
+<svg viewBox="0 0 1200 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="card2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="teal2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2DD4BF"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="iconBg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1220"/>
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="iconGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="48" y="48" width="252" height="244" rx="20" fill="url(#card2)" stroke="#334155" stroke-width="1" filter="url(#cardShadow)"/>
+  <circle cx="174" cy="120" r="52" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+  <rect x="108" y="186" width="132" height="10" rx="5" fill="#243244"/>
+  <rect x="132" y="210" width="84" height="10" rx="5" fill="#243244"/>
+  <rect x="120" y="96" width="42" height="28" rx="6" fill="#111827" stroke="#334155" stroke-width="1"/>
+  <rect x="120" y="132" width="42" height="28" rx="6" fill="#111827" stroke="#334155" stroke-width="1"/>
+  <polyline points="186,110 214,110 236,92" stroke="#2DD4BF" stroke-width="4" fill="none" filter="url(#iconGlow)"/>
+  <rect x="226" y="78" width="34" height="24" rx="6" fill="#111827" stroke="#334155" stroke-width="1"/>
+  <rect x="226" y="118" width="34" height="24" rx="6" fill="#111827" stroke="#2DD4BF" stroke-width="1"/>
+  <polyline points="234,90 240,96 250,84" stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <polyline points="234,130 240,136 250,124" stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <rect x="330" y="48" width="252" height="244" rx="20" fill="url(#card2)" stroke="#334155" stroke-width="1" filter="url(#cardShadow)"/>
+  <circle cx="456" cy="120" r="52" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+  <rect x="390" y="186" width="132" height="10" rx="5" fill="#243244"/>
+  <rect x="414" y="210" width="84" height="10" rx="5" fill="#243244"/>
+  <circle cx="444" cy="110" r="20" fill="none" stroke="#2DD4BF" stroke-width="3"/>
+  <line x1="458" y1="124" x2="472" y2="138" stroke="#2DD4BF" stroke-width="4" stroke-linecap="round"/>
+  <rect x="430" y="92" width="8" height="22" rx="4" fill="#243244"/>
+  <rect x="444" y="84" width="8" height="30" rx="4" fill="#2DD4BF" opacity="0.75"/>
+  <rect x="458" y="76" width="8" height="38" rx="4" fill="#38BDF8" opacity="0.85"/>
+  <rect x="472" y="88" width="8" height="26" rx="4" fill="#243244"/>
+
+  <rect x="612" y="48" width="252" height="244" rx="20" fill="url(#card2)" stroke="#334155" stroke-width="1" filter="url(#cardShadow)"/>
+  <circle cx="738" cy="120" r="52" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+  <rect x="672" y="186" width="132" height="10" rx="5" fill="#243244"/>
+  <rect x="696" y="210" width="84" height="10" rx="5" fill="#243244"/>
+  <path d="M738,154 m-38,0 a38,38 0 1,1 76,0" fill="none" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M738,154 m-38,0 a38,38 0 0,1 60,-30" fill="none" stroke="#2DD4BF" stroke-width="8" stroke-linecap="round" filter="url(#iconGlow)"/>
+  <line x1="738" y1="154" x2="760" y2="122" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="738" cy="154" r="6" fill="#2DD4BF"/>
+
+  <rect x="894" y="48" width="258" height="244" rx="20" fill="url(#card2)" stroke="#334155" stroke-width="1" filter="url(#cardShadow)"/>
+  <circle cx="1023" cy="120" r="52" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+  <rect x="957" y="186" width="132" height="10" rx="5" fill="#243244"/>
+  <rect x="981" y="210" width="84" height="10" rx="5" fill="#243244"/>
+  <rect x="956" y="112" width="34" height="34" rx="8" fill="#111827" stroke="#334155" stroke-width="1"/>
+  <circle cx="1020" cy="129" r="16" fill="none" stroke="#2DD4BF" stroke-width="3"/>
+  <circle cx="1068" cy="129" r="16" fill="none" stroke="#2DD4BF" stroke-width="3"/>
+  <polyline points="1002,128 1008,134 1018,122" stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <line x1="990" y1="129" x2="1000" y2="129" stroke="#94A3B8" stroke-width="3"/>
+  <line x1="1038" y1="129" x2="1050" y2="129" stroke="#94A3B8" stroke-width="3"/>
+  <line x1="1084" y1="129" x2="1096" y2="129" stroke="#94A3B8" stroke-width="3"/>
+</svg>
