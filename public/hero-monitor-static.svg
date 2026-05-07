@@ -1,0 +1,182 @@
+<svg viewBox="0 0 1240 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SmartQA Autopilot hero monitor</title>
+  <desc id="desc">Static monitor mockup showing SmartQA Autopilot workflow stages and release metrics.</desc>
+  <defs>
+    <linearGradient id="monitorFrame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F1520"/>
+      <stop offset="52%" stop-color="#0A0F17"/>
+      <stop offset="100%" stop-color="#313949"/>
+    </linearGradient>
+    <linearGradient id="monitorLip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#313949"/>
+      <stop offset="50%" stop-color="#1B2230"/>
+      <stop offset="100%" stop-color="#454F61"/>
+    </linearGradient>
+    <linearGradient id="screenBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111C"/>
+      <stop offset="60%" stop-color="#09131F"/>
+      <stop offset="100%" stop-color="#0C1521"/>
+    </linearGradient>
+    <linearGradient id="wireGlow" x1="160" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2DD4BF"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <linearGradient id="baseGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#485266"/>
+      <stop offset="35%" stop-color="#222B39"/>
+      <stop offset="100%" stop-color="#0F1621"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="screenGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="dropShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="32" stdDeviation="32" flood-color="#020817" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="620" cy="850" rx="305" ry="26" fill="#2DD4BF" fill-opacity="0.22" filter="url(#softGlow)"/>
+  <ellipse cx="620" cy="854" rx="250" ry="18" fill="#0B1220" fill-opacity="0.8"/>
+
+  <g filter="url(#dropShadow)">
+    <rect x="120" y="70" width="1000" height="560" rx="26" fill="url(#monitorFrame)" stroke="#566176" stroke-width="2"/>
+    <rect x="152" y="102" width="936" height="424" rx="8" fill="url(#screenBg)" stroke="#182231" stroke-width="1.5"/>
+    <circle cx="620" cy="87" r="5" fill="#121923" stroke="#2A3343"/>
+    <path d="M120 560H1120V630C1120 644.359 1108.36 656 1094 656H146C131.641 656 120 644.359 120 630V560Z" fill="url(#monitorLip)"/>
+  </g>
+
+  <path d="M555 655H685L720 814H520L555 655Z" fill="url(#baseGradient)"/>
+  <path d="M516 815C541 803 565 799 620 799C675 799 699 803 724 815" fill="#0B1220" stroke="#5A6578" stroke-width="2"/>
+  <ellipse cx="620" cy="818" rx="108" ry="16" fill="url(#monitorLip)" stroke="#5A6578" stroke-width="2"/>
+
+  <g>
+    <circle cx="928" cy="164" r="96" fill="#2DD4BF" fill-opacity="0.08" filter="url(#softGlow)"/>
+    <circle cx="850" cy="362" r="120" fill="#38BDF8" fill-opacity="0.08" filter="url(#softGlow)"/>
+    <circle cx="396" cy="382" r="138" fill="#2DD4BF" fill-opacity="0.06" filter="url(#softGlow)"/>
+  </g>
+
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(184 132)">
+      <g>
+        <circle cx="12" cy="12" r="10" fill="none" stroke="#2DD4BF" stroke-width="2"/>
+        <circle cx="24" cy="12" r="10" fill="none" stroke="#2DD4BF" stroke-width="2"/>
+      </g>
+      <text x="48" y="18" fill="#E2E8F0" font-size="23" font-weight="700" letter-spacing="2.2">SMARTQA AUTOPILOT</text>
+      <circle cx="830" cy="8" r="5" fill="#38BDF8"/>
+      <text x="848" y="16" fill="#E2E8F0" font-size="19" letter-spacing="1.7">SYSTEM ONLINE</text>
+    </g>
+
+    <g>
+      <path d="M280 298C350 298 366 274 438 274C511 274 525 308 600 308C675 308 686 278 760 278C836 278 846 306 922 306C992 306 1007 286 1046 286" fill="none" stroke="#1C3145" stroke-width="12" stroke-linecap="round"/>
+      <path d="M280 298C350 298 366 274 438 274C511 274 525 308 600 308C675 308 686 278 760 278C836 278 846 306 922 306C992 306 1007 286 1046 286" fill="none" stroke="url(#wireGlow)" stroke-width="4.5" stroke-linecap="round" filter="url(#screenGlow)"/>
+      <circle cx="382" cy="288" r="8" fill="#07111C" stroke="#38BDF8" stroke-width="3"/>
+      <circle cx="382" cy="288" r="4" fill="#2DD4BF"/>
+      <circle cx="566" cy="290" r="8" fill="#07111C" stroke="#38BDF8" stroke-width="3"/>
+      <circle cx="566" cy="290" r="4" fill="#2DD4BF"/>
+      <circle cx="744" cy="286" r="8" fill="#07111C" stroke="#38BDF8" stroke-width="3"/>
+      <circle cx="744" cy="286" r="4" fill="#2DD4BF"/>
+      <circle cx="920" cy="300" r="8" fill="#07111C" stroke="#38BDF8" stroke-width="3"/>
+      <circle cx="920" cy="300" r="4" fill="#2DD4BF"/>
+    </g>
+
+    <g transform="translate(228 234)">
+      <g transform="translate(0 0)">
+        <rect width="118" height="164" rx="18" fill="#0B1523" stroke="#36506A" stroke-width="1.6"/>
+        <circle cx="59" cy="36" r="22" fill="#0B1220" stroke="#203246" stroke-width="2"/>
+        <path d="M50 36h18M59 27v18" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+        <text x="18" y="104" fill="#DCE7F2" font-size="13" font-weight="700" letter-spacing="1.2">CODE COMMIT</text>
+        <text x="18" y="130" fill="#A5B4C5" font-size="12.5">Detect changes</text>
+        <rect x="18" y="146" width="40" height="4" rx="2" fill="#2DD4BF"/>
+      </g>
+
+      <g transform="translate(184 0)">
+        <rect width="118" height="164" rx="18" fill="#0B1523" stroke="#36506A" stroke-width="1.6"/>
+        <circle cx="59" cy="36" r="22" fill="#0B1220" stroke="#203246" stroke-width="2"/>
+        <circle cx="59" cy="36" r="10" fill="none" stroke="#38BDF8" stroke-width="3"/>
+        <circle cx="59" cy="36" r="4" fill="#2DD4BF"/>
+        <text x="10" y="104" fill="#DCE7F2" font-size="13" font-weight="700" letter-spacing="1.1">TEST SELECTION</text>
+        <text x="18" y="130" fill="#A5B4C5" font-size="12.5">Select relevant tests</text>
+        <rect x="18" y="146" width="40" height="4" rx="2" fill="#2DD4BF"/>
+      </g>
+
+      <g transform="translate(368 0)">
+        <rect width="118" height="164" rx="18" fill="#0B1523" stroke="#36506A" stroke-width="1.6"/>
+        <circle cx="59" cy="36" r="22" fill="#0B1220" stroke="#203246" stroke-width="2"/>
+        <path d="M53 26v20l16-10-16-10Z" fill="#38BDF8"/>
+        <text x="15" y="104" fill="#DCE7F2" font-size="13" font-weight="700" letter-spacing="1.1">TEST EXECUTION</text>
+        <text x="18" y="130" fill="#A5B4C5" font-size="12.5">Run tests in parallel</text>
+        <rect x="18" y="146" width="40" height="4" rx="2" fill="#2DD4BF"/>
+      </g>
+
+      <g transform="translate(552 0)">
+        <rect width="118" height="164" rx="18" fill="#0B1523" stroke="#36506A" stroke-width="1.6"/>
+        <circle cx="59" cy="36" r="22" fill="#0B1220" stroke="#203246" stroke-width="2"/>
+        <path d="M42 36h10l6-10 8 20 6-10h10" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="28" y="104" fill="#DCE7F2" font-size="13" font-weight="700" letter-spacing="1.1">ANALYSIS</text>
+        <text x="18" y="130" fill="#A5B4C5" font-size="12.5">Analyze results &amp; flakiness</text>
+        <rect x="18" y="146" width="40" height="4" rx="2" fill="#2DD4BF"/>
+      </g>
+
+      <g transform="translate(736 0)">
+        <rect width="118" height="164" rx="18" fill="#0B1523" stroke="#36506A" stroke-width="1.6"/>
+        <circle cx="59" cy="36" r="22" fill="#0B1220" stroke="#203246" stroke-width="2"/>
+        <rect x="48" y="24" width="22" height="24" rx="3" fill="none" stroke="#38BDF8" stroke-width="2.5"/>
+        <path d="M53 30h12M53 36h12M53 42h8" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round"/>
+        <text x="18" y="104" fill="#DCE7F2" font-size="13" font-weight="700" letter-spacing="1.1">REPORTING</text>
+        <text x="12" y="130" fill="#A5B4C5" font-size="12.5">Publish insights &amp; notifications</text>
+        <rect x="18" y="146" width="40" height="4" rx="2" fill="#2DD4BF"/>
+      </g>
+    </g>
+
+    <g>
+      <path d="M620 432C700 440 726 468 780 468C824 468 842 446 882 446C930 446 978 466 1008 494" fill="none" stroke="#1A2E40" stroke-width="10" stroke-linecap="round"/>
+      <path d="M620 432C700 440 726 468 780 468C824 468 842 446 882 446C930 446 978 466 1008 494" fill="none" stroke="url(#wireGlow)" stroke-width="3.5" stroke-linecap="round" filter="url(#screenGlow)"/>
+      <circle cx="768" cy="462" r="9" fill="#07111C" stroke="#38BDF8" stroke-width="3"/>
+      <circle cx="768" cy="462" r="5" fill="#2DD4BF"/>
+      <circle cx="874" cy="450" r="10" fill="#07111C" stroke="#38BDF8" stroke-width="3"/>
+      <circle cx="874" cy="450" r="5" fill="#2DD4BF"/>
+    </g>
+
+    <g transform="translate(170 486)">
+      <rect width="900" height="116" rx="18" fill="#0B1523" stroke="#36506A" stroke-width="1.6"/>
+      <text x="26" y="28" fill="#E2E8F0" font-size="15" letter-spacing="1.4">CURRENT RUN</text>
+      <text x="26" y="58" fill="#9FB0C2" font-size="13.5">smoke-regression-2026-04-26</text>
+      <circle cx="40" cy="90" r="22" fill="#07111C" stroke="#2A4059" stroke-width="3"/>
+      <path d="M40 68A22 22 0 1 1 21 100" fill="none" stroke="#2DD4BF" stroke-width="5" stroke-linecap="round"/>
+      <path d="M40 90h-10" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round"/>
+      <text x="74" y="90" fill="#FFFFFF" font-size="42" font-weight="700">72%</text>
+      <text x="76" y="110" fill="#9FB0C2" font-size="18">In Progress</text>
+
+      <line x1="232" y1="24" x2="232" y2="96" stroke="#22384E"/>
+      <line x1="360" y1="24" x2="360" y2="96" stroke="#22384E"/>
+      <line x1="464" y1="24" x2="464" y2="96" stroke="#22384E"/>
+      <line x1="576" y1="24" x2="576" y2="96" stroke="#22384E"/>
+      <line x1="700" y1="24" x2="700" y2="96" stroke="#22384E"/>
+
+      <text x="256" y="40" fill="#A5B4C5" font-size="15" letter-spacing="1.2">TOTAL TESTS</text>
+      <text x="260" y="88" fill="#FFFFFF" font-size="40" font-weight="700">1,248</text>
+
+      <text x="384" y="40" fill="#A5B4C5" font-size="15" letter-spacing="1.2">PASSED</text>
+      <text x="390" y="88" fill="#22D3EE" font-size="40" font-weight="700">802</text>
+
+      <text x="488" y="40" fill="#A5B4C5" font-size="15" letter-spacing="1.2">FAILED</text>
+      <text x="496" y="88" fill="#FB7185" font-size="40" font-weight="700">23</text>
+
+      <text x="600" y="40" fill="#A5B4C5" font-size="15" letter-spacing="1.2">SKIPPED</text>
+      <text x="608" y="88" fill="#FFFFFF" font-size="40" font-weight="700">333</text>
+
+      <text x="724" y="40" fill="#A5B4C5" font-size="15" letter-spacing="1.2">DURATION</text>
+      <text x="732" y="88" fill="#FFFFFF" font-size="38" font-weight="700">14M 32S</text>
+
+      <path d="M832 88C848 86 860 68 874 68C888 68 894 78 906 78C920 78 926 52 944 52C958 52 964 62 976 62C988 62 996 40 1012 34" fill="none" stroke="#203246" stroke-width="10" stroke-linecap="round"/>
+      <path d="M832 88C848 86 860 68 874 68C888 68 894 78 906 78C920 78 926 52 944 52C958 52 964 62 976 62C988 62 996 40 1012 34" fill="none" stroke="url(#wireGlow)" stroke-width="4" stroke-linecap="round" filter="url(#screenGlow)"/>
+    </g>
+  </g>
+</svg>

@@ -42,10 +42,10 @@ export default function ContactPage() {
                 the direct email route provide the primary conversion path.
               </p>
               <Link
-                href="mailto:hello@smartqa.pro"
+                href="/autopilot"
                 className="btn-secondary mt-4 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-sand transition"
               >
-                Email SmartQA directly
+                See how it works
               </Link>
             </div>
           </div>

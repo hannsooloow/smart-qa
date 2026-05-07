@@ -16,9 +16,8 @@ export function SiteShell({ children }: { children: ReactNode }) {
   }
 
   useEffect(() => {
-    closeMobileNav();
-
     const frameId = window.requestAnimationFrame(() => {
+      setMobileNavOpen(false);
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
       mainRef.current?.focus({ preventScroll: true });
     });
@@ -51,10 +50,10 @@ export function SiteShell({ children }: { children: ReactNode }) {
 
           <div className="flex items-center gap-3">
             <Link
-              href="/contact"
+              href="/autopilot"
               className="btn-primary hidden items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition sm:inline-flex"
             >
-              Let's Talk
+              Start with Autopilot
             </Link>
             <button
               type="button"
@@ -91,11 +90,11 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 </Link>
               ))}
               <Link
-                href="/contact"
+                href="/autopilot"
                 className="btn-primary mt-2 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-semibold transition sm:hidden"
                 onClick={closeMobileNav}
               >
-                Let's Talk
+                Start with Autopilot
               </Link>
             </nav>
           </div>
@@ -117,8 +116,8 @@ export function SiteShell({ children }: { children: ReactNode }) {
               className="h-auto w-[148px]"
             />
             <p className="text-sm leading-8 text-muted">
-              Automation QA, consulting, and SmartQA Autopilot for teams that
-              need a higher-confidence release process.
+              SmartQA Autopilot gives teams a faster path from product URL to
+              continuous QA coverage, test runs, and release reporting.
             </p>
             <div className="text-sm text-muted">
               <div>{contactDetails.email}</div>

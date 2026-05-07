@@ -15,8 +15,8 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="QA services designed around release confidence, not task volume."
         description="SmartQA helps teams remove the QA bottlenecks that block reliable delivery: fragile coverage, unclear workflows, weak quality gates, and poor visibility into release risk."
-        primaryCta={{ href: "/contact", label: "Book a Consultation" }}
-        secondaryCta={{ href: "/autopilot", label: "See SmartQA Autopilot" }}
+        primaryCta={{ href: "/autopilot", label: "Start with Autopilot" }}
+        secondaryCta={{ href: "/autopilot", label: "See how it works" }}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">

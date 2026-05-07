@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HeroVisualFrame } from "@/components/HeroVisualFrame";
 import { HeroVisual } from "@/components/hero-visual";
 import { SectionHeading } from "@/components/site-shell";
 import {
@@ -24,39 +23,37 @@ export default function Home() {
     <>
       <section className="grain flex min-h-[calc(100svh-88px)] items-center border-b border-[#1E293B]">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-14 sm:gap-14 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:gap-16 lg:px-12 lg:py-16 xl:gap-20 xl:py-20">
-          <div className="max-w-3xl space-y-7 lg:basis-[56%] lg:max-w-[44rem] xl:max-w-[46rem]">
+          <div className="max-w-3xl space-y-7 lg:basis-[49%] lg:max-w-[40rem] xl:max-w-[42rem]">
             <span className="eyebrow-chip rounded-full px-4 py-1.5 text-sm font-medium tracking-[0.18em] uppercase">
-              Automation-first QA services
+              Autopilot QA for fast-moving teams
             </span>
             <div className="space-y-5">
               <h1 className="headline-balance max-w-5xl font-display text-4xl leading-[1.02] font-semibold tracking-tight text-sand sm:text-5xl lg:text-[4.5rem] xl:text-[5rem]">
-                Release confidence for teams shipping at real product speed.
+                Set your URL. We test everything.
               </h1>
               <p className="copy-balance max-w-3xl text-base leading-7 text-muted sm:text-[1.1rem] sm:leading-8 lg:max-w-[36rem]">
-                SmartQA builds the automation systems, quality workflows, and
-                reporting visibility that growing software teams need to ship
-                faster without normalizing risk.
+                SmartQA Autopilot turns your product into continuous QA
+                coverage, test runs, and release reporting, without adding more
+                work to your team.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
-                href="/contact"
+                href="/autopilot"
                 className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition"
               >
-                Book a Consultation
+                Start with Autopilot
               </Link>
               <Link
                 href="/autopilot"
                 className="btn-secondary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold text-sand transition"
               >
-                Explore SmartQA Autopilot
+                See how it works
               </Link>
             </div>
           </div>
-          <div className="w-full lg:-ml-8 lg:basis-[60%] lg:-translate-y-8 xl:-ml-12 xl:max-w-[64rem]">
-            <HeroVisualFrame>
-              <HeroVisual className="w-full" />
-            </HeroVisualFrame>
+          <div className="w-full lg:-mr-4 lg:basis-[63%] lg:-translate-y-3 xl:-mr-6 xl:max-w-[68rem]">
+            <HeroVisual className="w-full" />
           </div>
         </div>
       </section>
@@ -64,10 +61,10 @@ export default function Home() {
       <section className="section-wash border-b border-[#1E293B]">
         <div className="mx-auto flex max-w-7xl flex-wrap gap-3 px-6 py-8 text-sm text-muted sm:px-8 sm:py-10 lg:px-12">
           {[
-            "Reduce manual regression bottlenecks",
-            "Stabilize release pipelines and quality gates",
-            "Make automation assets reusable across teams",
-            "Turn QA reporting into decision-ready evidence",
+            "Set up QA without building it all in-house",
+            "Catch release risk before production",
+            "Keep tests running as the product changes",
+            "Get clear pass/fail reporting for every release",
           ].map((item) => (
             <div key={item} className="proof-pill rounded-full px-5 py-3.5">
               {item}
@@ -76,55 +73,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
-        <SectionHeading
-          eyebrow="Core services"
-          title="SmartQA sells operating leverage, not generic test execution."
-          description="Each engagement is designed to remove a real quality bottleneck and leave the client with stronger systems, not just a backlog of test cases."
-        />
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          {services.map((service) => (
-            <Link
-              key={service.slug}
-              href={`/services/${service.slug}`}
-              className="surface-card group rounded-[1.8rem] p-5 transition hover:-translate-y-1 hover:border-accent/25 sm:rounded-[2rem] sm:p-6"
-            >
-              <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-[1.4rem] bg-[#0B1220]/78">
-                <Image
-                  src={serviceVisuals[service.slug]}
-                  alt=""
-                  width={96}
-                  height={96}
-                  className="h-auto w-full max-w-[5rem] object-contain"
-                />
-              </div>
-              <p className="text-sm font-semibold tracking-[0.16em] text-accent uppercase">
-                {service.shortLabel}
-              </p>
-              <h2 className="mt-3 font-display text-[1.9rem] font-semibold tracking-tight text-sand sm:text-[2.1rem]">
-                {service.title}
-              </h2>
-              <p className="mt-3 max-w-xl text-[0.98rem] leading-7 text-muted sm:text-base">
-                {service.summary}
-              </p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {service.outcomes.slice(0, 3).map((outcome) => (
-                  <span key={outcome} className="tag-pill rounded-full px-3 py-1 text-xs text-muted">
-                    {outcome}
-                  </span>
-                ))}
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       <section className="border-y border-[#1E293B] bg-[#0F172A]">
         <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
           <SectionHeading
             eyebrow="SmartQA Autopilot"
-            title="A premium managed QA engine now, a product platform over time."
-            description="Autopilot gives SmartQA a differentiated delivery model: intelligent analysis, generated scenarios, execution, healing, and reporting wrapped in a human-guided service."
+            title="QA on autopilot."
+            description="Give SmartQA your product URL. We map flows, generate tests, run them, and report what matters."
           />
           <div className="mt-6 flex justify-center lg:mt-8">
             <div className="w-full max-w-[60rem]">
@@ -192,12 +146,55 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+        <SectionHeading
+          eyebrow="Core services"
+          title="We take QA work off your team."
+          description="SmartQA removes the testing bottlenecks that slow releases. You get better coverage, earlier signal, and clearer release decisions."
+        />
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          {services.map((service) => (
+            <Link
+              key={service.slug}
+              href={`/services/${service.slug}`}
+              className="surface-card group rounded-[1.8rem] p-5 transition hover:-translate-y-1 hover:border-accent/25 sm:rounded-[2rem] sm:p-6"
+            >
+              <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-[1.4rem] bg-[#0B1220]/78">
+                <Image
+                  src={serviceVisuals[service.slug]}
+                  alt=""
+                  width={96}
+                  height={96}
+                  className="h-auto w-full max-w-[5rem] object-contain"
+                />
+              </div>
+              <p className="text-sm font-semibold tracking-[0.16em] text-accent uppercase">
+                {service.shortLabel}
+              </p>
+              <h2 className="mt-3 font-display text-[1.9rem] font-semibold tracking-tight text-sand sm:text-[2.1rem]">
+                {service.title}
+              </h2>
+              <p className="mt-3 max-w-xl text-[0.98rem] leading-7 text-muted sm:text-base">
+                {service.summary}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {service.outcomes.slice(0, 3).map((outcome) => (
+                  <span key={outcome} className="tag-pill rounded-full px-3 py-1 text-xs text-muted">
+                    {outcome}
+                  </span>
+                ))}
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
           <div className="max-w-3xl">
             <SectionHeading
               eyebrow="Why SmartQA"
-              title="Built for technical buyers who care about release stability, not marketing theater."
-              description="The site should make it obvious that SmartQA understands engineering workflows, maintenance reality, and the difference between test quantity and release confidence."
+              title="Built for teams that need QA done, not explained."
+              description="SmartQA is for companies that want faster releases, fewer manual checks, and a QA system they can trust."
             />
           </div>
           <div className="w-full max-w-[28rem] lg:pt-6">
@@ -226,9 +223,9 @@ export default function Home() {
       <section className="section-wash border-y border-[#1E293B]">
         <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
           <SectionHeading
-            eyebrow="Who it is for"
-            title="The message stays the same. The buying trigger changes by stage."
-            description="SmartQA should speak differently to startup founders, scaleup engineering leaders, agencies, and enterprise teams without fragmenting the offer."
+            eyebrow="Who it&apos;s for"
+            title="Same outcome. Different trigger."
+            description="SmartQA works for teams at different stages, but the value stays simple: less QA work and better release confidence."
           />
           <div className="mt-12 grid gap-7 lg:grid-cols-2">
             {audienceSegments.map((segment) => (
@@ -263,8 +260,8 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
         <SectionHeading
           eyebrow="Insights"
-          title="Content designed to qualify buyers, not just attract clicks."
-          description="The first content cluster should reinforce SmartQA's authority in automation systems, CI/CD quality, release confidence, and AI-assisted QA operations."
+          title="Content for teams fixing real QA problems."
+          description="Short, useful thinking on release confidence, CI/CD quality, flaky tests, and smarter automation."
         />
         <div className="mt-12 grid gap-7 lg:grid-cols-3">
           {insightPosts.map((post) => (
@@ -289,23 +286,27 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-20 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:gap-14 lg:px-12 lg:py-24">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
-              Start with the highest-leverage next step
+              Start with the product
             </p>
             <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-sand sm:text-5xl">
-              Book a consultation and map the QA bottleneck that is actually slowing releases.
+              We&apos;ll handle the QA.
             </h2>
+            <p className="mt-5 max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+              Show us the app, the release flow, or the bottleneck. We&apos;ll show
+              you where Autopilot fits.
+            </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/contact"
+                href="/autopilot"
                 className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition"
               >
-                Book a Consultation
+                Start with Autopilot
               </Link>
               <Link
-                href="/services"
+                href="/autopilot"
                 className="btn-secondary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold text-sand transition"
               >
-                Review Services
+                Start with your URL
               </Link>
             </div>
           </div>

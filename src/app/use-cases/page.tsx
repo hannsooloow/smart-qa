@@ -14,7 +14,7 @@ export default function UseCasesPage() {
         eyebrow="Use cases"
         title="The offer stays consistent. The buying trigger changes by team stage."
         description="SmartQA supports startups, scaleups, agencies, and enterprise teams with a service model that adapts to their release risk, delivery maturity, and reporting needs."
-        primaryCta={{ href: "/contact", label: "Discuss your use case" }}
+        primaryCta={{ href: "/autopilot", label: "Start with Autopilot" }}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">

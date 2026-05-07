@@ -14,7 +14,7 @@ export default function AboutPage() {
         eyebrow="About SmartQA"
         title="Built for teams that need quality systems to scale with delivery."
         description="SmartQA exists for companies that do not want QA to be an afterthought, a manual bottleneck, or an unreliable layer in the release process."
-        primaryCta={{ href: "/contact", label: "Start a conversation" }}
+        primaryCta={{ href: "/autopilot", label: "Start with Autopilot" }}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">

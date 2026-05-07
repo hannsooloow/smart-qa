@@ -14,8 +14,8 @@ export default function AutopilotPage() {
         eyebrow="SmartQA Autopilot"
         title="A platform-backed QA delivery model built for teams that have outgrown manual-heavy release validation."
         description="SmartQA Autopilot is positioned as a premium managed service today: intelligent analysis, generated test scenarios, execution, healing, and reporting wrapped in a workflow that clients can trust."
-        primaryCta={{ href: "/contact", label: "Request an Autopilot Pilot" }}
-        secondaryCta={{ href: "/services", label: "Compare with core services" }}
+        primaryCta={{ href: "/autopilot", label: "Start with Autopilot" }}
+        secondaryCta={{ href: "/autopilot", label: "Start with your URL" }}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">

@@ -37,7 +37,7 @@ export default function InsightDetailPage({ params }: { params: Params }) {
         eyebrow={post.category}
         title={post.title}
         description={post.excerpt}
-        primaryCta={{ href: "/contact", label: "Book a Consultation" }}
+        primaryCta={{ href: "/autopilot", label: "Start with Autopilot" }}
       />
 
       <article className="mx-auto max-w-4xl px-6 py-24 sm:px-8 lg:py-32">

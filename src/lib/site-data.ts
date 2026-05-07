@@ -1,8 +1,8 @@
 export const navItems = [
-  { href: "/services", label: "Services" },
   { href: "/autopilot", label: "SmartQA Autopilot" },
   { href: "/use-cases", label: "Use Cases" },
   { href: "/insights", label: "Insights" },
+  { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -11,15 +11,15 @@ export const services = [
   {
     slug: "automation-qa",
     shortLabel: "Automation QA",
-    title: "Automation QA Services",
+    title: "Coverage for the flows that matter",
     summary:
-      "Build maintainable test automation around the flows that actually determine release confidence.",
+      "We build test coverage around the product journeys that actually affect release confidence.",
     hero:
       "Replace brittle manual regression cycles with automation coverage that survives product change and supports faster shipping.",
     outcomes: [
-      "Lower regression risk before release",
-      "Reduce repetitive manual QA effort",
-      "Improve confidence in product-critical flows",
+      "Fewer manual regression cycles",
+      "More confidence before release",
+      "Coverage that stays useful",
       "Make automation assets easier to maintain",
     ],
     deliverables: [
@@ -37,15 +37,15 @@ export const services = [
   {
     slug: "qa-consulting",
     shortLabel: "QA Consulting",
-    title: "QA Consulting",
+    title: "Fix the QA gaps slowing delivery",
     summary:
-      "Design the quality strategy, operating model, and technical decisions that let teams scale without accumulating release chaos.",
+      "We find the process, tooling, and ownership issues that make QA harder than it should be.",
     hero:
       "Give engineering leadership a pragmatic QA strategy that fits the current team, roadmap, and delivery model.",
     outcomes: [
-      "Clearer ownership and workflows",
-      "Better tooling and process decisions",
-      "Higher signal from QA investment",
+      "Clearer QA workflows",
+      "Better release discipline",
+      "Stronger signal from testing",
       "A roadmap for quality maturity",
     ],
     deliverables: [
@@ -63,15 +63,15 @@ export const services = [
   {
     slug: "cicd-quality-integration",
     shortLabel: "CI/CD Integration",
-    title: "CI/CD Quality Integration",
+    title: "Catch problems inside the pipeline",
     summary:
-      "Embed quality gates directly into delivery workflows so teams get earlier signal and fewer late surprises.",
+      "We move QA closer to the release path so issues show up earlier and decisions get easier.",
     hero:
       "Move QA from a downstream checkpoint into a continuous part of the engineering delivery system.",
     outcomes: [
-      "Earlier defect detection",
-      "More reliable deployments",
-      "Clear quality gates for releases",
+      "Earlier failure detection",
+      "Cleaner release gates",
+      "Less last-minute QA chaos",
       "Less firefighting near release windows",
     ],
     deliverables: [
@@ -89,15 +89,15 @@ export const services = [
   {
     slug: "performance-reliability",
     shortLabel: "Performance",
-    title: "Performance & Reliability",
+    title: "Find reliability issues before users do",
     summary:
-      "Identify stability and performance risk before it reaches production and damages user trust.",
+      "We test the stability and performance risks that damage trust when they reach production.",
     hero:
       "Strengthen the reliability posture of the product with practical validation, analysis, and QA visibility.",
     outcomes: [
-      "Reduced production surprise",
-      "Better visibility into reliability risk",
-      "More resilient release decisions",
+      "Fewer production surprises",
+      "Better risk visibility",
+      "More confident launches",
       "Faster diagnosis of recurring failures",
     ],
     deliverables: [
@@ -128,75 +128,75 @@ export const companyStats = [
 
 export const differentiators = [
   {
-    title: "Automation with operating context",
+    title: "We focus on release risk",
     description:
-      "SmartQA builds test systems around delivery risk, not around vanity coverage percentages.",
+      "We test what affects shipping, not what looks good in a report.",
   },
   {
-    title: "Platform-backed service delivery",
+    title: "We make QA easier to run",
     description:
-      "SmartQA Autopilot makes the service more scalable, repeatable, and evidence-driven than agency-only execution.",
+      "Less setup, less manual effort, and less maintenance drag for your team.",
   },
   {
-    title: "CI-aware quality thinking",
+    title: "We fit into delivery",
     description:
-      "Quality is integrated into release workflows so teams get earlier signal and cleaner go or no-go decisions.",
+      "QA works with the release process instead of blocking it.",
   },
   {
-    title: "Technical credibility without hype",
+    title: "We keep the signal clear",
     description:
-      "The messaging emphasizes maintainability, workflow fit, and reporting clarity instead of generic AI promises.",
+      "Results are built to support release decisions, not just test counts.",
   },
 ];
 
 export const autopilotSteps = [
   {
-    title: "URL-based intake",
+    title: "Set your URL",
     description:
-      "A client provides the application entry point and project context for SmartQA's managed setup flow.",
+      "We connect to the product and start from the live experience.",
   },
   {
-    title: "Application analysis",
+    title: "We map the flows",
     description:
-      "Agents map flows, identify candidate journeys, and surface likely quality-critical paths.",
+      "SmartQA identifies the journeys that matter most.",
   },
   {
-    title: "Scenario generation",
+    title: "We generate and run tests",
     description:
-      "SmartQA produces test case suggestions that can be refined before execution begins.",
+      "Coverage starts without long manual setup.",
   },
   {
-    title: "Execution runner",
+    title: "We catch breakage early",
     description:
-      "Browser-based runs execute the selected coverage and capture diagnostic evidence.",
+      "Failures, flake, and risky changes are surfaced fast.",
   },
   {
-    title: "Healing layer",
+    title: "You get release-ready reporting",
     description:
-      "Common selector or flow breakages can be repaired to reduce maintenance drag.",
+      "Clear results for engineering, product, and leadership.",
   },
   {
-    title: "Evidence-rich reporting",
+    title: "It keeps running",
     description:
-      "Clients receive screenshots, logs, traces, and recommendations that are usable by engineering teams.",
+      "SmartQA keeps QA moving as the product changes.",
   },
 ];
 
 export const autopilotBenefits = [
   {
-    title: "Faster path from application URL to actionable QA coverage",
+    title: "Less QA setup work",
     description:
-      "Autopilot shortens the distance between product context and a usable regression workflow.",
+      "You do not need to manually build every step before testing starts.",
   },
   {
-    title: "Less brittle maintenance overhead",
+    title: "Continuous value",
     description:
-      "The healing layer and managed review process reduce the normal cost of keeping automation current.",
+      "Coverage keeps running as the product evolves.",
   },
   {
-    title: "More useful reporting for technical stakeholders",
+    title: "Clear release signal",
     description:
-      "Evidence is structured to support debugging, release decisions, and stakeholder communication.",
+      "You see what passed, what failed, and what needs attention.",
   },
 ];
 
@@ -204,9 +204,9 @@ export const audienceSegments = [
   {
     slug: "startups",
     title: "Startups",
-    triggerLabel: "Speed with control",
+    triggerLabel: "Move fast without guessing",
     summary:
-      "Best for teams moving quickly without a mature QA foundation and starting to feel the cost of release uncertainty.",
+      "For teams shipping quickly without a real QA system yet.",
     painPoints: [
       "Manual testing is stealing time from shipping",
       "Founders or engineering leads do not trust release quality",
@@ -216,9 +216,9 @@ export const audienceSegments = [
   {
     slug: "scaleups",
     title: "Scaleups",
-    triggerLabel: "Stability at velocity",
+    triggerLabel: "Keep quality aligned with speed",
     summary:
-      "Best for growing product organizations where engineering output outpaced QA maturity and reliability signal.",
+      "For teams whose release pace has outgrown manual QA and flaky automation.",
     painPoints: [
       "Flaky automation has become hard to trust",
       "Multiple squads ship in parallel with inconsistent quality controls",
@@ -228,9 +228,9 @@ export const audienceSegments = [
   {
     slug: "agencies",
     title: "Agencies",
-    triggerLabel: "Repeatable delivery",
+    triggerLabel: "Deliver client work with confidence",
     summary:
-      "Best for agencies that need high-trust QA capability across multiple client products without building a large internal function.",
+      "For teams that need repeatable QA across multiple products.",
     painPoints: [
       "Client expectations exceed in-house QA capacity",
       "Delivery margins shrink when QA stays manual",
@@ -240,9 +240,9 @@ export const audienceSegments = [
   {
     slug: "enterprise",
     title: "Enterprise teams",
-    triggerLabel: "Visibility and governance",
+    triggerLabel: "Add signal to complex releases",
     summary:
-      "Best for teams that need stronger process maturity, clearer reporting, and better integration with existing release systems.",
+      "For teams that need stronger reporting, reliability, and release control.",
     painPoints: [
       "Quality tooling and ownership are fragmented",
       "Leadership needs stronger evidence before high-impact releases",
@@ -257,7 +257,7 @@ export const insightPosts = [
     category: "Automation Strategy",
     title: "How to Build Release Confidence With Test Automation",
     excerpt:
-      "Coverage does not create confidence by itself. The system around it does.",
+      "Coverage alone is not enough. The release system around it is what builds confidence.",
     summary:
       "Strong release confidence comes from aligning automation coverage, pipeline signal, ownership, and reporting around actual business-critical flows.",
     sections: [
@@ -283,7 +283,7 @@ export const insightPosts = [
     category: "CI/CD Quality",
     title: "How Quality Gates Belong Inside CI/CD, Not Beside It",
     excerpt:
-      "Late QA signal turns quality into friction. Pipeline-native signal turns it into leverage.",
+      "Catch release risk inside the pipeline, before it turns into release friction.",
     summary:
       "Embedding validation into CI/CD creates earlier feedback, cleaner go or no-go decisions, and less release firefighting.",
     sections: [
@@ -309,7 +309,7 @@ export const insightPosts = [
     category: "Automation Operations",
     title: "Why Flaky Tests Break Trust Faster Than Missing Tests",
     excerpt:
-      "Once engineers stop believing the suite, coverage volume stops mattering.",
+      "Once the team stops trusting the suite, the coverage stops helping.",
     summary:
       "Flaky tests damage release workflows by normalizing ignored failures and making automation harder to use as a decision tool.",
     sections: [
