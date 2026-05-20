@@ -83,7 +83,7 @@ export function ContactForm() {
       <div className="mt-5">
         <Field
           label="Interest"
-          placeholder="Services, SmartQA Autopilot, or both"
+          placeholder="Qonductor, rollout services, or both"
           value={form.interest}
           onChange={(value) => setForm((current) => ({ ...current, interest: value }))}
         />

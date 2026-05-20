@@ -13,10 +13,10 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="QA services designed around release confidence, not task volume."
-        description="SmartQA helps teams remove the QA bottlenecks that block reliable delivery: fragile coverage, unclear workflows, weak quality gates, and poor visibility into release risk."
-        primaryCta={{ href: "/autopilot", label: "Start with Autopilot" }}
-        secondaryCta={{ href: "/autopilot", label: "See how it works" }}
+        title="Implementation and support around Qonductor."
+        description="SmartQA helps teams roll out, integrate, stabilize, and improve Qonductor inside real delivery workflows. The platform stays central. The services make adoption faster and more durable."
+        primaryCta={{ href: "/contact", label: "Book a Demo" }}
+        secondaryCta={{ href: "/qonductor", label: "Watch the Video" }}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">

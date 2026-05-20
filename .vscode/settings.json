@@ -1,0 +1,6 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "npx --version 2>&1": true,
+        "npm install": true
+    }
+}

@@ -1,9 +1,9 @@
 export const navItems = [
-  { href: "/autopilot", label: "SmartQA Autopilot" },
-  { href: "/use-cases", label: "Use Cases" },
-  { href: "/insights", label: "Insights" },
+  { href: "/qonductor", label: "Why Qonductor" },
+  { href: "/features", label: "Features" },
   { href: "/services", label: "Services" },
-  { href: "/about", label: "About" },
+  { href: "/insights", label: "Insights" },
+  { href: "/company", label: "Company" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -122,7 +122,7 @@ export const serviceNavItems = services.map((service) => ({
 export const companyStats = [
   { value: "4", label: "service pillars tied to release confidence" },
   { value: "1", label: "primary CTA focused on consultation booking" },
-  { value: "6", label: "Autopilot workflow stages for pilot positioning" },
+  { value: "6", label: "Qonductor workflow stages for release clarity" },
   { value: "24h", label: "target response time for qualified inbound leads" },
 ];
 
@@ -149,54 +149,54 @@ export const differentiators = [
   },
 ];
 
-export const autopilotSteps = [
+export const qonductorSteps = [
   {
-    title: "Set your URL",
+    title: "Track coverage",
     description:
-      "We connect to the product and start from the live experience.",
+      "See which product flows are covered and which changes need attention before release.",
   },
   {
-    title: "We map the flows",
+    title: "Run targeted checks",
     description:
-      "SmartQA identifies the journeys that matter most.",
+      "Execute the tests that matter for the release in front of you instead of chasing noise.",
   },
   {
-    title: "We generate and run tests",
+    title: "Review failures fast",
     description:
-      "Coverage starts without long manual setup.",
+      "Surface breakage, flaky behavior, and regressions before they slow the team down.",
   },
   {
-    title: "We catch breakage early",
+    title: "Keep suites aligned",
     description:
-      "Failures, flake, and risky changes are surfaced fast.",
+      "Maintain QA as the product, release workflow, and delivery pace keep changing.",
   },
   {
-    title: "You get release-ready reporting",
+    title: "Centralize reporting",
     description:
-      "Clear results for engineering, product, and leadership.",
+      "Give engineering, product, and QA one clear view of what passed, failed, and drifted.",
   },
   {
-    title: "It keeps running",
+    title: "Decide with evidence",
     description:
-      "SmartQA keeps QA moving as the product changes.",
+      "Know whether a release is ready without extra coordination, guesswork, or late surprises.",
   },
 ];
 
-export const autopilotBenefits = [
+export const qonductorBenefits = [
   {
-    title: "Less QA setup work",
+    title: "Less release uncertainty",
     description:
-      "You do not need to manually build every step before testing starts.",
+      "See what changed, what passed, and what still needs attention before the team ships.",
   },
   {
-    title: "Continuous value",
+    title: "Less QA coordination",
     description:
-      "Coverage keeps running as the product evolves.",
+      "Keep coverage, execution, and reporting in one system instead of stitching updates together by hand.",
   },
   {
-    title: "Clear release signal",
+    title: "Clearer release decisions",
     description:
-      "You see what passed, what failed, and what needs attention.",
+      "Use one release view to understand risk, spot failures, and decide whether to move forward.",
   },
 ];
 

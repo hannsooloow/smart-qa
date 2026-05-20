@@ -6,7 +6,7 @@ import { contactDetails } from "@/lib/site-data";
 export const metadata = {
   title: "Contact",
   description:
-    "Book a SmartQA consultation or send an inquiry about QA automation services and SmartQA Autopilot.",
+    "Book a SmartQA consultation or send an inquiry about Qonductor, rollout services, and release confidence work.",
 };
 
 export default function ContactPage() {
@@ -14,11 +14,13 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Start with the QA bottleneck that is costing the team the most."
-        description="Use the form to outline your release risk, automation gaps, or interest in SmartQA Autopilot. The next step is a scoped consultation, not a generic sales sequence."
+        title="Start with the release risk."
+        description="Use the form to outline where quality slows delivery, where coverage breaks down, or where reporting is missing. The next step is a scoped conversation, not a generic sales sequence."
+        sectionClassName="min-h-[20rem] sm:min-h-[22rem] lg:min-h-[24rem]"
+        contentClassName="py-12 sm:py-14 lg:py-16 xl:py-18"
       />
 
-      <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <section className="mx-auto max-w-7xl px-6 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-18">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="surface-card rounded-[2.25rem] p-8 sm:p-9">
             <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
@@ -29,8 +31,8 @@ export default function ContactPage() {
             </h2>
             <p className="mt-4 text-sm leading-8 text-muted">
               SmartQA is optimized around qualified conversations with teams that
-              need stronger automation systems, delivery confidence, or an
-              Autopilot pilot discussion.
+              need stronger QA systems, clearer release signal, or a Qonductor
+              rollout discussion.
             </p>
             <div className="mt-6 space-y-3 text-sm text-muted">
               <div>{contactDetails.email}</div>
@@ -42,10 +44,10 @@ export default function ContactPage() {
                 the direct email route provide the primary conversion path.
               </p>
               <Link
-                href="/autopilot"
+                href="/qonductor"
                 className="btn-secondary mt-4 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-sand transition"
               >
-                See how it works
+                Watch the Video
               </Link>
             </div>
           </div>

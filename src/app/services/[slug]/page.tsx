@@ -38,8 +38,8 @@ export default function ServiceDetailPage({ params }: { params: Params }) {
         eyebrow={service.shortLabel}
         title={service.title}
         description={service.hero}
-        primaryCta={{ href: "/autopilot", label: "Start with Autopilot" }}
-        secondaryCta={{ href: "/autopilot", label: "See how it works" }}
+        primaryCta={{ href: "/contact", label: "Book a Demo" }}
+        secondaryCta={{ href: "/qonductor", label: "Watch the Video" }}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
@@ -98,10 +98,10 @@ export default function ServiceDetailPage({ params }: { params: Params }) {
           </div>
           <div className="mt-10">
             <Link
-              href="/autopilot"
+              href="/contact"
               className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition"
             >
-              Start with Autopilot
+              Book a Demo
             </Link>
           </div>
         </div>
