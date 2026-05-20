@@ -157,6 +157,55 @@ a {
   color: var(--sand);
 }
 
+.footer-link {
+  color: rgba(148, 163, 184, 0.9);
+  transition:
+    color 160ms ease-out,
+    opacity 160ms ease-out;
+}
+
+.footer-link:hover {
+  color: rgba(226, 232, 240, 0.98);
+}
+
+.footer-link-strong {
+  color: rgba(226, 232, 240, 0.88);
+}
+
+.footer-link-strong:hover {
+  color: rgba(226, 232, 240, 1);
+}
+
+.footer-utility-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.375rem;
+  height: 2.375rem;
+  border: 1px solid rgba(51, 65, 85, 0.68);
+  border-radius: 9999px;
+  color: rgba(148, 163, 184, 0.88);
+  background: rgba(8, 18, 32, 0.42);
+  box-shadow: inset 0 1px 0 rgba(226, 232, 240, 0.03);
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.footer-utility-link:hover {
+  color: rgba(138, 206, 198, 0.92);
+  border-color: rgba(45, 212, 191, 0.24);
+  background: rgba(15, 23, 42, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(226, 232, 240, 0.04),
+    0 0 0 1px rgba(45, 212, 191, 0.04),
+    0 0 14px rgba(45, 212, 191, 0.05);
+  transform: translateY(-1px);
+}
+
 .form-input {
   width: 100%;
   border: 1px solid rgba(71, 85, 105, 0.78);

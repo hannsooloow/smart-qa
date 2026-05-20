@@ -18,15 +18,15 @@ const displayFont = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL("https://smartqa.pro"),
   title: {
-    default: "SmartQA | QA Automation and Release Confidence",
+    default: "SmartQA | Qonductor and Release Confidence",
     template: "%s | SmartQA",
   },
   description:
-    "SmartQA helps software teams improve release confidence through automation QA services, QA consulting, CI/CD quality integration, and SmartQA Autopilot.",
+    "SmartQA helps software teams improve release confidence through Qonductor, QA rollout services, consulting, and CI/CD quality integration.",
   openGraph: {
-    title: "SmartQA | QA Automation and Release Confidence",
+    title: "SmartQA | Qonductor and Release Confidence",
     description:
-      "Automation-first QA services and platform-backed delivery systems for teams that need reliable releases.",
+      "Qonductor by SmartQA brings coverage, execution, and release reporting into one system for teams that need reliable releases.",
     url: "https://smartqa.pro",
     siteName: "SmartQA",
     type: "website",

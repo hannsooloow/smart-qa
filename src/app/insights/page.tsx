@@ -15,7 +15,7 @@ export default function InsightsPage() {
         eyebrow="Insights"
         title="Thoughtful QA content that supports buying decisions and technical credibility."
         description="The initial content strategy is service-led: each article reinforces SmartQA's authority in automation systems, release quality, CI/CD integration, and maintenance reality."
-        primaryCta={{ href: "/autopilot", label: "Start with Autopilot" }}
+        primaryCta={{ href: "/qonductor", label: "Watch the Video" }}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
