@@ -4,7 +4,7 @@ import { operatingPrinciples } from "@/lib/site-data";
 export const metadata = {
   title: "Company",
   description:
-    "Learn how SmartQA combines premium QA services, operational maturity, and productized capability powered by Qonductor.",
+    "Learn how SmartQA combines premium QA services, operational maturity, and proprietary internal delivery infrastructure.",
 };
 
 export default function CompanyPage() {
@@ -12,10 +12,10 @@ export default function CompanyPage() {
     <>
       <PageHero
         eyebrow="Company"
-        title="SmartQA is the team behind the model."
-        description="SmartQA delivers premium QA systems for teams that need stronger automation, better release signal, and operational maturity backed by Qonductor."
-        primaryCta={{ href: "/contact", label: "Book a Demo" }}
-        secondaryCta={{ href: "/qonductor", label: "Watch the Video" }}
+        title="SmartQA is a quality engineering partner built around release confidence."
+        description="SmartQA helps engineering teams strengthen coverage, sharpen QA signal, and improve release decisions through expert execution and proprietary internal delivery infrastructure."
+        primaryCta={{ href: "/contact", label: "Book a Consultation" }}
+        secondaryCta={{ href: "/#how-we-work", label: "Explore How We Work" }}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">

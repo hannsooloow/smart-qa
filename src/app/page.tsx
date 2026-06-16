@@ -5,42 +5,44 @@ import { SectionHeading } from "@/components/site-shell";
 import {
   differentiators,
   insightPosts,
-  qonductorBenefits,
+  deliveryBenefits,
   services,
 } from "@/lib/site-data";
 
 const featureHighlights = [
   {
-    label: "Coverage orchestration",
-    title: "Keep coverage tied to real product change.",
+    label: "Risk discovery",
+    title: "Find the unstable paths before they reach production.",
     summary:
-      "Qonductor helps SmartQA keep QA aligned with what actually moved in the release path.",
+      "SmartQA focuses validation on the changes and flows most likely to create release risk.",
   },
   {
-    label: "Targeted execution",
-    title: "Run the checks that matter now.",
+    label: "Quality signal",
+    title: "Turn validation into clearer release signal.",
     summary:
-      "Focus execution around release signal instead of dragging every team through the same QA motion.",
+      "Coverage, failures, and evidence are organized to support better release decisions, not more noise.",
   },
   {
-    label: "Release visibility",
-    title: "Make the signal easier to read.",
+    label: "Release readiness",
+    title: "See what is ready, exposed, and still needs review.",
     summary:
-      "Bring failures, reporting, and release readiness into a clearer system for engineering and product.",
+      "SmartQA brings decision-ready reporting that shows where confidence is strong and where attention is still required.",
   },
   {
     label: "Delivery fit",
-    title: "Support the workflow teams already run.",
+    title: "Improve QA without slowing delivery down.",
     summary:
-      "The capability fits delivery operations instead of creating another disconnected QA layer to manage.",
+      "The operating model fits active engineering teams instead of introducing another heavy process layer.",
   },
 ];
 
 const serviceVisuals: Record<string, string> = {
-  "automation-qa": "/service-icon-automation.svg",
-  "qa-consulting": "/service-icon-consulting.svg",
-  "cicd-quality-integration": "/service-icon-cicd.svg",
-  "performance-reliability": "/service-icon-performance.svg",
+  "automation-engineering": "/service-icon-automation.svg",
+  "release-assurance": "/service-icon-performance.svg",
+  "release-readiness": "/service-icon-cicd.svg",
+  "quality-engineering-advisory": "/service-icon-consulting.svg",
+  "release-risk-analysis": "/service-icon-performance.svg",
+  "release-intelligence": "/service-icon-cicd.svg",
 };
 
 export default function Home() {
@@ -50,15 +52,15 @@ export default function Home() {
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-6 py-18 sm:gap-16 sm:px-8 sm:py-20 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:px-12 lg:py-24 xl:gap-16 xl:py-28">
           <div className="max-w-3xl space-y-8 lg:basis-[46%] lg:max-w-[40rem] xl:max-w-[42rem]">
             <span className="eyebrow-chip inline-flex rounded-full px-4.5 py-1.5 text-[0.72rem] font-medium tracking-[0.14em] uppercase sm:px-5">
-              AI-Powered QA Orchestration
+              Platform-Enabled QA Delivery
             </span>
             <div className="space-y-5">
               <h1 className="headline-balance max-w-5xl font-display text-4xl leading-[1.02] font-semibold tracking-tight text-sand sm:text-5xl lg:text-[4.5rem] xl:text-[5rem]">
-                Set your URL. We test everything.
+                Provide your URL. We&apos;ll find the cracks before your users do.
               </h1>
               <p className="copy-balance max-w-3xl text-base leading-7 text-muted sm:text-[1.1rem] sm:leading-8 lg:max-w-[34rem]">
-                SmartQA delivers continuous QA coverage, release visibility, and
-                execution workflows powered by Qonductor.
+                SmartQA helps teams uncover release-critical issues early,
+                strengthen coverage, and ship with more confidence.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -66,13 +68,13 @@ export default function Home() {
                 href="/contact"
                 className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition"
               >
-                Book a Demo
+                Book a Consultation
               </Link>
               <Link
-                href="/qonductor"
+                href="/services"
                 className="btn-secondary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold text-sand transition"
               >
-                Watch the Video
+                Explore Services
               </Link>
             </div>
           </div>
@@ -85,10 +87,10 @@ export default function Home() {
       <section className="section-wash border-b border-[#1E293B]">
         <div className="mx-auto flex max-w-7xl flex-wrap gap-3.5 px-6 py-10 text-sm text-muted sm:px-8 sm:py-12 lg:px-12">
           {[
-            "Test automation without the maintenance drag",
-            "QA consulting for real delivery teams",
-            "CI/CD quality built into release flow",
-            "Performance and reliability where it matters",
+            "Built Around Release Risk",
+            "Quality Engineering, Not Test Staffing",
+            "Clearer Signal Before Release",
+            "Faster Path To Useful QA",
           ].map((item) => (
             <div key={item} className="proof-pill rounded-full px-5 py-3.5">
               {item}
@@ -100,8 +102,8 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-28">
         <SectionHeading
           eyebrow="Services"
-          title="What SmartQA brings into delivery."
-          description="From test automation and QA consulting to CI/CD quality integration and reliability work, SmartQA helps teams put better QA systems in place without slowing the roadmap down."
+          title="Quality engineering services built for release confidence."
+          description="From automation engineering and release assurance to risk analysis and release intelligence, SmartQA brings expert judgment into the moments where quality matters most."
         />
         <div className="mt-14 grid gap-5 lg:grid-cols-2">
           {services.map((service) => (
@@ -148,12 +150,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-[#1E293B] bg-[#0F172A]">
+      <section id="how-we-work" className="border-y border-[#1E293B] bg-[#0F172A]">
         <div className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-28">
           <SectionHeading
-            eyebrow="Why Qonductor"
-            title="Qonductor is the capability behind the model."
-            description="SmartQA uses Qonductor to bring stronger orchestration, clearer signal, and better release visibility into the work without turning the company site into a product microsite."
+            eyebrow="How We Work"
+            title="Platform-enabled delivery built around release confidence."
+            description="SmartQA combines expert QA execution with proprietary internal delivery infrastructure to surface risk earlier, keep coverage aligned, and make release signal easier to trust."
           />
           <div className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
@@ -182,10 +184,10 @@ export default function Home() {
             </div>
             <div className="surface-accent-card rounded-[2rem] p-6 sm:rounded-[2.25rem] sm:p-9">
               <h3 className="font-display text-2xl font-semibold text-sand sm:text-3xl">
-                What it helps teams do
+                What the model improves
               </h3>
               <div className="mt-6 space-y-4">
-                {qonductorBenefits.map((benefit) => (
+                {deliveryBenefits.map((benefit) => (
                   <div
                     key={benefit.title}
                     className="surface-card-soft rounded-[1.35rem] p-5 sm:rounded-[1.5rem]"
@@ -203,16 +205,16 @@ export default function Home() {
           </div>
           <div className="mt-12 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/qonductor"
+              href="/services"
               className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition"
             >
-              Watch the Video
+              Explore Services
             </Link>
             <Link
               href="/contact"
               className="btn-secondary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold text-sand transition"
             >
-              Book a Demo
+              Book a Consultation
             </Link>
           </div>
         </div>
@@ -221,9 +223,9 @@ export default function Home() {
       <section className="section-wash border-y border-[#1E293B]">
         <div className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-28">
           <SectionHeading
-            eyebrow="Features"
-            title="The capability shows up in the work."
-            description="These are the operational advantages SmartQA brings forward when Qonductor is part of the delivery model."
+            eyebrow="Release Confidence"
+            title="How stronger QA signal changes the release conversation."
+            description="These are the advantages SmartQA brings when quality engineering is tied directly to release risk, readiness, and evidence."
           />
           <div className="mt-14 grid gap-7 lg:grid-cols-2">
             {featureHighlights.map((feature) => (
@@ -251,8 +253,8 @@ export default function Home() {
           <div className="max-w-3xl">
             <SectionHeading
               eyebrow="Why SmartQA"
-              title="Built for teams that need QA done, not explained."
-              description="SmartQA is for companies that want faster releases, fewer manual checks, and a QA system they can trust."
+              title="Built for teams that need better release decisions, not more testing noise."
+              description="SmartQA supports engineering leaders who need sharper QA judgment, stronger execution, and a more mature path to release confidence."
             />
           </div>
           <div className="w-full max-w-[28rem] lg:pt-6">
@@ -281,8 +283,8 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-28">
         <SectionHeading
           eyebrow="Insights"
-          title="Content for teams fixing real QA problems."
-          description="Short, useful thinking on release confidence, CI/CD quality, flaky tests, and smarter automation."
+          title="Practical thinking on release confidence and quality engineering."
+          description="Short, useful insights for engineering and product leaders improving validation, coverage, and release signal."
         />
         <div className="mt-14 grid gap-7 lg:grid-cols-3">
           {insightPosts.map((post) => (
@@ -314,21 +316,21 @@ export default function Home() {
             </h2>
             <p className="mt-5 max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
               Tell us where quality slows delivery, where coverage breaks down,
-              or where reporting is missing. We&apos;ll show where Qonductor and
-              SmartQA fit.
+              or where release confidence is weak. SmartQA will help you find
+              the gaps, reduce the risk, and strengthen the signal before ship.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/contact"
                 className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition"
               >
-                Book a Demo
+                Book a Consultation
               </Link>
               <Link
-                href="/qonductor"
+                href="/services"
                 className="btn-secondary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold text-sand transition"
               >
-                Watch the Video
+                Explore Services
               </Link>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function AutopilotPage() {
-  redirect("/qonductor");
+  redirect("/services");
 }

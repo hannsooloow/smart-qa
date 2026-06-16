@@ -30,12 +30,11 @@ export function HeroVisual({ className }: HeroVisualProps) {
         />
         <div className="relative z-10 overflow-visible sm:-mx-2 lg:-mx-4 xl:-mx-6">
           <Image
-            src="/Hero-Smart-QA-monitor.png"
-            alt="Qonductor monitor showing coordinated QA workflow stages and release metrics"
-            width={1240}
-            height={900}
+            src="/Hero-smart-qa-monitor-June-No-Background.png"
+            alt="Release assessment monitor showing identified risks, coverage signal, and release confidence"
+            width={1600}
+            height={1200}
             priority
-            unoptimized
             className="h-auto w-[100%] max-w-none translate-x-0 translate-y-0 sm:w-[104%] sm:translate-x-[-2%] lg:w-[112%] lg:translate-x-[-6%] lg:translate-y-[-2%] xl:w-[116%] xl:translate-x-[-8%]"
             sizes="(min-width: 1440px) 960px, (min-width: 1280px) 58vw, (min-width: 1024px) 62vw, 100vw"
           />

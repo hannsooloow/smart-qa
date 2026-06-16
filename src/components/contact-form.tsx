@@ -83,7 +83,7 @@ export function ContactForm() {
       <div className="mt-5">
         <Field
           label="Interest"
-          placeholder="Qonductor, rollout services, or both"
+          placeholder="QA assessment, release readiness, risk analysis, or advisory"
           value={form.interest}
           onChange={(value) => setForm((current) => ({ ...current, interest: value }))}
         />
