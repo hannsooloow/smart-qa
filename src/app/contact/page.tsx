@@ -6,7 +6,7 @@ import { contactDetails } from "@/lib/site-data";
 export const metadata = {
   title: "Contact",
   description:
-    "Book a SmartQA consultation or send an inquiry about Qonductor, rollout services, and release confidence work.",
+    "Book a SmartQA consultation or request a QA assessment, release risk review, or delivery conversation.",
 };
 
 export default function ContactPage() {
@@ -31,8 +31,8 @@ export default function ContactPage() {
             </h2>
             <p className="mt-4 text-sm leading-8 text-muted">
               SmartQA is optimized around qualified conversations with teams that
-              need stronger QA systems, clearer release signal, or a Qonductor
-              rollout discussion.
+              need stronger QA systems, clearer release signal, or a release
+              risk review before the next high-pressure ship window.
             </p>
             <div className="mt-6 space-y-3 text-sm text-muted">
               <div>{contactDetails.email}</div>
@@ -40,14 +40,15 @@ export default function ContactPage() {
             </div>
             <div className="surface-accent-card mt-8 rounded-[1.7rem] p-6">
               <p className="text-sm leading-8 text-muted">
-                Booking integration can be connected next. For now, this form and
-                the direct email route provide the primary conversion path.
+                Start with a consultation, QA assessment, or release risk review.
+                This form and the direct email route remain the primary path for
+                serious conversations.
               </p>
               <Link
-                href="/qonductor"
+                href="/services"
                 className="btn-secondary mt-4 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-sand transition"
               >
-                Watch the Video
+                Explore Services
               </Link>
             </div>
           </div>

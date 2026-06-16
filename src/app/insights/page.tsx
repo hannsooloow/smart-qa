@@ -5,7 +5,7 @@ import { insightPosts } from "@/lib/site-data";
 export const metadata = {
   title: "Insights",
   description:
-    "Read SmartQA insights on QA automation, release confidence, CI/CD quality, and automation operations.",
+    "Read SmartQA insights on release confidence, quality engineering, automation strategy, and reporting quality.",
 };
 
 export default function InsightsPage() {
@@ -13,16 +13,16 @@ export default function InsightsPage() {
     <>
       <PageHero
         eyebrow="Insights"
-        title="Thoughtful QA content that supports buying decisions and technical credibility."
-        description="The initial content strategy is service-led: each article reinforces SmartQA's authority in automation systems, release quality, CI/CD integration, and maintenance reality."
-        primaryCta={{ href: "/qonductor", label: "Watch the Video" }}
+        title="Practical insight for teams improving release confidence."
+        description="Each article reinforces SmartQA's perspective on automation strategy, release readiness, reporting quality, and the operating discipline behind strong QA systems."
+        primaryCta={{ href: "/services", label: "Explore Services" }}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
         <SectionHeading
           eyebrow="Launch articles"
-          title="Start with foundational content that qualifies buyers."
-          description="These articles support SEO, internal linking, and credibility without turning the site into a generic traffic blog."
+          title="Start with the issues that most often weaken release confidence."
+          description="These articles help engineering and product leaders think more clearly about automation, validation, and the signal they use to ship."
         />
         <div className="mt-12 grid gap-7 lg:grid-cols-3">
           {insightPosts.map((post) => (

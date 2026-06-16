@@ -38,8 +38,8 @@ export default function ServiceDetailPage({ params }: { params: Params }) {
         eyebrow={service.shortLabel}
         title={service.title}
         description={service.hero}
-        primaryCta={{ href: "/contact", label: "Book a Demo" }}
-        secondaryCta={{ href: "/qonductor", label: "Watch the Video" }}
+        primaryCta={{ href: "/contact", label: "Book a Consultation" }}
+        secondaryCta={{ href: "/#how-we-work", label: "Explore How We Work" }}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
@@ -47,7 +47,7 @@ export default function ServiceDetailPage({ params }: { params: Params }) {
           <div>
             <SectionHeading
               eyebrow="What this engagement solves"
-              title="Built for teams that need usable quality leverage."
+              title="Built for teams that need stronger release confidence."
               description={service.summary}
             />
             <div className="mt-12 grid gap-5 sm:grid-cols-2">
@@ -83,8 +83,8 @@ export default function ServiceDetailPage({ params }: { params: Params }) {
         <div className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
           <SectionHeading
             eyebrow="When to bring SmartQA in"
-            title="Strong buying triggers are usually operational, not theoretical."
-            description="These situations typically justify bringing in external QA automation support before the team absorbs more delivery risk."
+            title="The strongest triggers are operational, visible, and time-sensitive."
+            description="These situations typically justify bringing SmartQA in before release risk compounds and internal teams lose confidence in the signal."
           />
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {service.situations.map((situation) => (
@@ -101,7 +101,7 @@ export default function ServiceDetailPage({ params }: { params: Params }) {
               href="/contact"
               className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition"
             >
-              Book a Demo
+              Book a Consultation
             </Link>
           </div>
         </div>

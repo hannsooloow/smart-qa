@@ -1,7 +1,6 @@
 export const navItems = [
-  { href: "/qonductor", label: "Why Qonductor" },
-  { href: "/features", label: "Features" },
   { href: "/services", label: "Services" },
+  { href: "/#how-we-work", label: "How We Work" },
   { href: "/insights", label: "Insights" },
   { href: "/company", label: "Company" },
   { href: "/contact", label: "Contact" },
@@ -9,18 +8,18 @@ export const navItems = [
 
 export const services = [
   {
-    slug: "automation-qa",
-    shortLabel: "Automation QA",
-    title: "Coverage for the flows that matter",
+    slug: "automation-engineering",
+    shortLabel: "Automation Engineering",
+    title: "Engineer coverage around release-critical flows",
     summary:
-      "We build test coverage around the product journeys that actually affect release confidence.",
+      "Build resilient automated coverage around the journeys that matter most to release confidence.",
     hero:
-      "Replace brittle manual regression cycles with automation coverage that survives product change and supports faster shipping.",
+      "Strengthen release confidence with automation engineered for signal, maintainability, and delivery speed.",
     outcomes: [
-      "Fewer manual regression cycles",
-      "More confidence before release",
-      "Coverage that stays useful",
-      "Make automation assets easier to maintain",
+      "Coverage engineered for change",
+      "Earlier signal before release",
+      "Less manual regression drag",
+      "More maintainable QA assets",
     ],
     deliverables: [
       "Coverage plan tied to real release risk",
@@ -35,81 +34,133 @@ export const services = [
     ],
   },
   {
-    slug: "qa-consulting",
-    shortLabel: "QA Consulting",
-    title: "Fix the QA gaps slowing delivery",
+    slug: "release-assurance",
+    shortLabel: "Release Assurance",
+    title: "Bring expert judgment into high-pressure releases",
     summary:
-      "We find the process, tooling, and ownership issues that make QA harder than it should be.",
+      "Add disciplined validation, triage, and release support where product change creates real delivery exposure.",
     hero:
-      "Give engineering leadership a pragmatic QA strategy that fits the current team, roadmap, and delivery model.",
+      "Reduce late-cycle uncertainty with release-focused QA execution designed for real delivery pressure.",
     outcomes: [
-      "Clearer QA workflows",
-      "Better release discipline",
-      "Stronger signal from testing",
-      "A roadmap for quality maturity",
+      "Stronger release decisions",
+      "Fewer late surprises",
+      "Sharper defect triage",
+      "More disciplined QA execution",
     ],
     deliverables: [
-      "QA maturity assessment",
-      "Target-state operating model",
-      "Coverage and tooling recommendations",
-      "Implementation roadmap for team enablement",
+      "Pre-release validation planning",
+      "Critical issue triage support",
+      "Execution oversight on risky changes",
+      "Release signal reporting",
     ],
     situations: [
-      "Quality ownership is unclear across product and engineering",
-      "The team needs guidance before investing further in tooling",
-      "Delivery speed increased but QA processes did not mature with it",
+      "High-impact releases need stronger QA judgment",
+      "Delivery teams need sharper signal before ship",
+      "Internal QA coverage is not enough for risky change windows",
     ],
   },
   {
-    slug: "cicd-quality-integration",
-    shortLabel: "CI/CD Integration",
-    title: "Catch problems inside the pipeline",
+    slug: "release-readiness",
+    shortLabel: "Release Readiness",
+    title: "Validate whether the release is ready to ship",
     summary:
-      "We move QA closer to the release path so issues show up earlier and decisions get easier.",
+      "Turn validation, evidence, and coverage review into a clearer go or no-go decision before release.",
     hero:
-      "Move QA from a downstream checkpoint into a continuous part of the engineering delivery system.",
+      "Give engineering and product leadership a sharper view of what is ready, what is exposed, and what needs review.",
     outcomes: [
-      "Earlier failure detection",
-      "Cleaner release gates",
-      "Less last-minute QA chaos",
-      "Less firefighting near release windows",
+      "Cleaner release decisions",
+      "Clearer readiness evidence",
+      "Less ambiguity before ship",
+      "More confidence on critical launches",
     ],
     deliverables: [
-      "Pipeline quality gate design",
-      "Automated checks wired into CI/CD",
-      "Failure triage and reporting approach",
-      "Environment and release validation strategy",
+      "Release readiness review",
+      "Critical flow validation",
+      "Environment and regression assessment",
+      "Decision-ready QA summary",
     ],
     situations: [
-      "Teams deploy often but do not trust pipeline quality signal",
-      "Quality checks exist but are disconnected from release decisions",
-      "Regression bugs are discovered too late in the delivery cycle",
-    ],
-  },
-  {
-    slug: "performance-reliability",
-    shortLabel: "Performance",
-    title: "Find reliability issues before users do",
-    summary:
-      "We test the stability and performance risks that damage trust when they reach production.",
-    hero:
-      "Strengthen the reliability posture of the product with practical validation, analysis, and QA visibility.",
-    outcomes: [
-      "Fewer production surprises",
-      "Better risk visibility",
-      "More confident launches",
-      "Faster diagnosis of recurring failures",
-    ],
-    deliverables: [
-      "Reliability risk assessment",
-      "Performance validation plan",
-      "Issue reproduction and analysis support",
-      "Reporting for engineering and product stakeholders",
-    ],
-    situations: [
-      "The product is stable functionally but unreliable under real usage patterns",
-      "Performance or reliability issues affect customer trust",
       "Teams need better evidence before high-risk releases",
+      "Product change is outpacing validation confidence",
+      "Leadership needs a clearer release signal",
+    ],
+  },
+  {
+    slug: "quality-engineering-advisory",
+    shortLabel: "Quality Engineering Advisory",
+    title: "Design a QA model that fits the way your team ships",
+    summary:
+      "Define stronger quality systems, ownership, and operating discipline for teams that need more mature release confidence.",
+    hero:
+      "Align QA strategy, tooling, and delivery practices to the realities of your team, roadmap, and release risk.",
+    outcomes: [
+      "Clearer QA ownership",
+      "Stronger operating model",
+      "Better quality decisions",
+      "A practical path to maturity",
+    ],
+    deliverables: [
+      "QA operating model assessment",
+      "Coverage and tooling recommendations",
+      "Quality workflow design",
+      "Implementation roadmap",
+    ],
+    situations: [
+      "Quality ownership is fragmented",
+      "The release process has outgrown current QA practices",
+      "Leaders need a more mature quality engineering model",
+    ],
+  },
+  {
+    slug: "release-risk-analysis",
+    shortLabel: "Release Risk Analysis",
+    title: "Identify the weak points before they reach production",
+    summary:
+      "Analyze where coverage is thin, where change is risky, and where the release path is exposed before users feel the impact.",
+    hero:
+      "Find the unstable flows, missing checks, and high-risk patterns that undermine release confidence.",
+    outcomes: [
+      "Sharper visibility into release exposure",
+      "Better prioritization of QA effort",
+      "Earlier detection of hidden risk",
+      "Clearer focus on what matters most",
+    ],
+    deliverables: [
+      "Release risk assessment",
+      "Coverage gap review",
+      "Critical flow prioritization",
+      "Risk summary for engineering and product",
+    ],
+    situations: [
+      "Teams know risk exists but cannot see it clearly",
+      "Coverage is growing without strong prioritization",
+      "Critical flows need focused QA attention",
+    ],
+  },
+  {
+    slug: "release-intelligence",
+    shortLabel: "Release Intelligence",
+    title: "Turn QA activity into decision-ready release signal",
+    summary:
+      "Bring validation evidence, issue signal, and coverage context into reporting that helps teams make better release decisions faster.",
+    hero:
+      "Replace scattered QA updates with clearer visibility into readiness, risk, and what needs attention next.",
+    outcomes: [
+      "Clearer go or no-go signal",
+      "Better cross-team visibility",
+      "Faster interpretation of QA findings",
+      "More credible release reporting",
+    ],
+    deliverables: [
+      "Release reporting structure",
+      "Issue signal summaries",
+      "Coverage and evidence rollups",
+      "Stakeholder-ready QA visibility",
+    ],
+    situations: [
+      "QA reporting is noisy or hard to trust",
+      "Product and engineering need clearer decision support",
+      "Release visibility is fragmented across tools and people",
     ],
   },
 ];
@@ -120,9 +171,9 @@ export const serviceNavItems = services.map((service) => ({
 }));
 
 export const companyStats = [
-  { value: "4", label: "service pillars tied to release confidence" },
+  { value: "6", label: "quality engineering services built around release confidence" },
   { value: "1", label: "primary CTA focused on consultation booking" },
-  { value: "6", label: "Qonductor workflow stages for release clarity" },
+  { value: "1", label: "proprietary internal platform supporting SmartQA delivery" },
   { value: "24h", label: "target response time for qualified inbound leads" },
 ];
 
@@ -130,73 +181,73 @@ export const differentiators = [
   {
     title: "We focus on release risk",
     description:
-      "We test what affects shipping, not what looks good in a report.",
+      "SmartQA concentrates effort where failures would delay, damage, or destabilize a release.",
   },
   {
-    title: "We make QA easier to run",
+    title: "We bring quality engineering judgment",
     description:
-      "Less setup, less manual effort, and less maintenance drag for your team.",
+      "Coverage, validation, and reporting are guided by experienced QA operators, not generic execution volume.",
   },
   {
     title: "We fit into delivery",
     description:
-      "QA works with the release process instead of blocking it.",
+      "Our operating model supports the way engineering teams actually ship, without adding unnecessary friction.",
   },
   {
     title: "We keep the signal clear",
     description:
-      "Results are built to support release decisions, not just test counts.",
+      "The output is decision-ready quality signal built for release confidence, not a pile of disconnected test results.",
   },
 ];
 
-export const qonductorSteps = [
+export const deliveryWorkflowSteps = [
   {
-    title: "Track coverage",
+    title: "Map release risk",
     description:
-      "See which product flows are covered and which changes need attention before release.",
+      "Identify the flows, changes, and weak points that deserve the most QA attention before release.",
   },
   {
-    title: "Run targeted checks",
+    title: "Prioritize critical validation",
     description:
-      "Execute the tests that matter for the release in front of you instead of chasing noise.",
+      "Focus execution on the checks that improve release confidence instead of spreading effort across noise.",
   },
   {
-    title: "Review failures fast",
+    title: "Surface failures early",
     description:
-      "Surface breakage, flaky behavior, and regressions before they slow the team down.",
+      "Expose breakage, regressions, and unstable behavior before they become customer-facing problems.",
   },
   {
-    title: "Keep suites aligned",
+    title: "Keep coverage aligned",
     description:
-      "Maintain QA as the product, release workflow, and delivery pace keep changing.",
+      "Maintain useful coverage as the product, roadmap, and release cadence continue to change.",
   },
   {
-    title: "Centralize reporting",
+    title: "Clarify reporting",
     description:
-      "Give engineering, product, and QA one clear view of what passed, failed, and drifted.",
+      "Give engineering and product a clearer view of what passed, what failed, and what still needs attention.",
   },
   {
     title: "Decide with evidence",
     description:
-      "Know whether a release is ready without extra coordination, guesswork, or late surprises.",
+      "Turn QA findings into usable release signal without guesswork, scattered updates, or last-minute surprises.",
   },
 ];
 
-export const qonductorBenefits = [
+export const deliveryBenefits = [
   {
-    title: "Less release uncertainty",
+    title: "Sharper release visibility",
     description:
-      "See what changed, what passed, and what still needs attention before the team ships.",
+      "See what changed, what was validated, and what still carries risk before the team ships.",
   },
   {
-    title: "Less QA coordination",
+    title: "Faster risk discovery",
     description:
-      "Keep coverage, execution, and reporting in one system instead of stitching updates together by hand.",
+      "Use SmartQA's internal delivery infrastructure to uncover unstable flows and missing coverage earlier in the cycle.",
   },
   {
     title: "Clearer release decisions",
     description:
-      "Use one release view to understand risk, spot failures, and decide whether to move forward.",
+      "Bring evidence, coverage signal, and issue context together so engineering leaders can decide with confidence.",
   },
 ];
 

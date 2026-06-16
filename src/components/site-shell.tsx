@@ -153,7 +153,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
               href="/contact"
               className="btn-primary hidden items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition sm:inline-flex"
             >
-              Book a Demo
+              Book a Consultation
             </Link>
             <button
               type="button"
@@ -194,7 +194,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 className="btn-primary mt-2 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-semibold transition sm:hidden"
                 onClick={closeMobileNav}
               >
-                Book a Demo
+                Book a Consultation
               </Link>
             </nav>
           </div>
@@ -282,24 +282,24 @@ export function SiteShell({ children }: { children: ReactNode }) {
             </div>
             <div className="space-y-4 lg:pt-1.5">
               <div className="text-xs font-semibold tracking-[0.14em] text-accent uppercase">
-                Qonductor
+                Platform-Enabled Delivery
               </div>
               <p className="max-w-[18rem] text-sm leading-6 text-slate-300/78">
-                Orchestration, release visibility, and QA coordination integrated into SmartQA delivery.
+                SmartQA uses proprietary internal infrastructure to improve release visibility, execution consistency, and QA signal behind the scenes.
               </p>
               <div className="flex flex-col gap-2.5 text-sm font-medium text-sand">
-                <Link href="/qonductor" className="footer-link footer-link-strong">
-                  Watch the Video
+                <Link href="/#how-we-work" className="footer-link footer-link-strong">
+                  How We Work
                 </Link>
                 <Link href="/contact" className="footer-link footer-link-strong">
-                  Book a Demo
+                  Book a Consultation
                 </Link>
               </div>
             </div>
           </div>
           <div className="mt-10 flex flex-col gap-3 border-t border-[#1E293B]/55 pt-5 text-xs text-slate-400/80 sm:flex-row sm:items-center sm:justify-between">
             <div>© 2026 SmartQA</div>
-            <div>Powered by Qonductor</div>
+            <div>Release confidence through quality engineering</div>
           </div>
         </div>
       </footer>
