@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | SmartQA",
   },
   description:
-    "SmartQA helps software teams improve release confidence through quality engineering, release readiness, risk analysis, and platform-enabled QA delivery.",
+    "SmartQA helps software teams improve release confidence through quality engineering, release readiness, and release risk analysis.",
   openGraph: {
     title: "SmartQA | Release Confidence and Quality Engineering",
     description:

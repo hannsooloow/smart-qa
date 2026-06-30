@@ -173,7 +173,7 @@ export const serviceNavItems = services.map((service) => ({
 export const companyStats = [
   { value: "6", label: "quality engineering services built around release confidence" },
   { value: "1", label: "primary CTA focused on consultation booking" },
-  { value: "1", label: "proprietary internal platform supporting SmartQA delivery" },
+  { value: "1", label: "release-focused quality engineering approach" },
   { value: "24h", label: "target response time for qualified inbound leads" },
 ];
 
@@ -242,7 +242,7 @@ export const deliveryBenefits = [
   {
     title: "Faster risk discovery",
     description:
-      "Use SmartQA's internal delivery infrastructure to uncover unstable flows and missing coverage earlier in the cycle.",
+      "Uncover unstable flows and missing coverage earlier in the release cycle.",
   },
   {
     title: "Clearer release decisions",
