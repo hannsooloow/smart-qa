@@ -7,36 +7,27 @@ type HeroVisualProps = {
 export function HeroVisual({ className }: HeroVisualProps) {
   return (
     <div className={className}>
-      <div className="relative mx-auto w-full max-w-[76rem] overflow-visible">
+      <div className="relative isolate mx-auto w-full max-w-[40rem] sm:max-w-[48rem] lg:max-w-[74rem]">
         <div
           aria-hidden
-          className="absolute inset-x-[8%] top-[6%] h-[22%] rounded-full bg-white/[0.028] blur-[62px]"
+          className="absolute inset-x-[18%] top-[4%] h-[18%] rounded-full bg-white/[0.05] blur-[72px] lg:top-[10%]"
         />
         <div
           aria-hidden
-          className="absolute right-[4%] top-[15%] h-[36%] w-[48%] rounded-full bg-[#38BDF8]/[0.08] blur-[102px]"
+          className="absolute inset-x-[14%] top-[14%] h-[20%] rounded-full bg-[#0B1220]/56 blur-[74px] lg:top-[20%]"
         />
         <div
           aria-hidden
-          className="absolute inset-x-[18%] bottom-[10%] h-[20%] rounded-full bg-[#2DD4BF]/14 blur-[86px]"
+          className="absolute inset-x-[12%] bottom-[14%] h-[20%] rounded-full bg-[#2DD4BF]/18 blur-[96px] lg:bottom-[10%]"
         />
-        <div
-          aria-hidden
-          className="absolute left-[6%] bottom-[10%] h-[26%] w-[42%] rounded-full bg-[#0B1220] blur-[90px]"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-x-[18%] top-[20%] h-[20%] rounded-full bg-[#0B1220]/56 blur-[74px]"
-        />
-        <div className="relative z-10 overflow-visible sm:-mx-2 lg:-mx-4 xl:-mx-6">
+        <div className="relative z-10 -mt-7 overflow-x-clip -mx-1 sm:-mt-5 sm:-mx-2 lg:-mt-2 lg:-mx-4 xl:-mx-6">
           <Image
             src="/Hero-smart-qa-monitor-June-No-Background.png"
             alt="Release assessment monitor showing identified risks, coverage signal, and release confidence"
             width={1600}
             height={1200}
             priority
-            className="h-auto w-[100%] max-w-none translate-x-0 translate-y-0 sm:w-[104%] sm:translate-x-[-2%] lg:w-[112%] lg:translate-x-[-6%] lg:translate-y-[-2%] xl:w-[116%] xl:translate-x-[-8%]"
-            sizes="(min-width: 1440px) 960px, (min-width: 1280px) 58vw, (min-width: 1024px) 62vw, 100vw"
+            className="h-auto w-[108%] max-w-none -translate-x-[4%] -translate-y-1 sm:w-[108%] sm:-translate-x-[4%] sm:-translate-y-2 lg:w-[116%] lg:-translate-x-[9%] lg:-translate-y-6 xl:w-[120%] xl:-translate-x-[11%]"
           />
         </div>
       </div>

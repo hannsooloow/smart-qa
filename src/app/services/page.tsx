@@ -14,7 +14,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="Quality engineering services built for release confidence."
-        description="SmartQA delivers expert QA execution, sharper release signal, and platform-enabled delivery support for teams shipping under real delivery pressure."
+        description="SmartQA delivers expert QA services, clearer release signal, and focused validation support for teams shipping under real delivery pressure."
         primaryCta={{ href: "/contact", label: "Book a Consultation" }}
         secondaryCta={{ href: "/#how-we-work", label: "Explore How We Work" }}
       />

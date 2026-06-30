@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
+import { DeliverableFrame } from "@/components/deliverable-visuals";
 import { HeroVisual } from "@/components/hero-visual";
 import { SectionHeading } from "@/components/site-shell";
 import {
   differentiators,
   insightPosts,
   deliveryBenefits,
-  services,
 } from "@/lib/site-data";
 
 const featureHighlights = [
@@ -36,31 +37,215 @@ const featureHighlights = [
   },
 ];
 
-const serviceVisuals: Record<string, string> = {
-  "automation-engineering": "/service-icon-automation.svg",
-  "release-assurance": "/service-icon-performance.svg",
-  "release-readiness": "/service-icon-cicd.svg",
-  "quality-engineering-advisory": "/service-icon-consulting.svg",
-  "release-risk-analysis": "/service-icon-performance.svg",
-  "release-intelligence": "/service-icon-cicd.svg",
-};
+const problemRecognitionCards = [
+  {
+    title: "Issues surface after release",
+    src: "/Problem Recognition_IGM_01.png",
+  },
+  {
+    title: "Unclear release readiness",
+    src: "/Problem Recognition_IGM_02.png",
+  },
+  {
+    title: "Automation lacks trust",
+    src: "/Problem Recognition_IGM_03.png",
+  },
+  {
+    title: "Visibility is fragmented",
+    src: "/Problem Recognition_IGM_04.png",
+  },
+] as const;
+
+const simpleSolutionSteps = [
+  {
+    step: "01",
+    title: "You provide the URL",
+    summary: "Start with the product surface that needs a clearer release signal.",
+  },
+  {
+    step: "02",
+    title: "We assess release risk",
+    summary: "SmartQA reviews the journeys most likely to fail, break trust, or slow the release.",
+  },
+  {
+    step: "03",
+    title: "You see what matters",
+    summary: "The result is a clearer view of exposure, priorities, and what deserves attention next.",
+  },
+];
+
+const whatYouReceiveCards = [
+  {
+    title: "Clarity",
+    description: "See where release confidence is weak and what needs attention first.",
+    icon: SearchIcon,
+    preview: (
+      <DeliverableFrame
+        size="compact"
+        label="Executive Summary"
+        title="Confidence is weakest in checkout and account recovery."
+        footer="Top risks prioritized"
+      />
+    ),
+  },
+  {
+    title: "Evidence",
+    description: "Receive findings grounded in real issues, exposure, and validation gaps.",
+    icon: ShieldIcon,
+    preview: (
+      <DeliverableFrame
+        size="compact"
+        label="Findings Report"
+        title="Five ranked findings with severity and supporting evidence."
+        footer="Evidence linked to each issue"
+      />
+    ),
+  },
+  {
+    title: "Recommendations",
+    description: "Get clear next steps to reduce risk and improve release readiness.",
+    icon: ChecklistIcon,
+    preview: (
+      <DeliverableFrame
+        size="compact"
+        label="Recommendations Brief"
+        title="Recommended actions sequenced by impact and urgency."
+        footer="Immediate next actions defined"
+      />
+    ),
+  },
+  {
+    title: "Ongoing Confidence",
+    description: "Keep coverage strong and release decisions supported over time.",
+    icon: SignalIcon,
+    preview: (
+      <DeliverableFrame
+        size="compact"
+        label="Release Readiness Review"
+        title="Readiness status, watch areas, and blockers before ship."
+        footer="Recurring release signal"
+      />
+    ),
+  },
+] as const;
+
+function OutcomeCard({
+  icon,
+  title,
+  description,
+  preview,
+}: {
+  icon: ReactNode;
+  title: string;
+  description: string;
+  preview: ReactNode;
+}) {
+  return (
+    <div className="surface-card group rounded-[1.8rem] p-6 sm:rounded-[2rem] sm:p-7">
+      <div className="flex h-12 w-12 items-center justify-center rounded-[1rem] border border-[#2DD4BF]/20 bg-[#2DD4BF]/8 text-accent">
+        {icon}
+      </div>
+      <h3 className="mt-5 font-display text-[1.5rem] font-semibold tracking-tight text-sand sm:text-[1.7rem]">
+        {title}
+      </h3>
+      <p className="mt-3 max-w-md text-sm leading-7 text-muted sm:text-[0.98rem]">
+        {description}
+      </p>
+      <div className="mt-6">{preview}</div>
+    </div>
+  );
+}
+
+function SolutionStep({
+  step,
+  title,
+  summary,
+  emphasized = false,
+}: {
+  step: string;
+  title: string;
+  summary: string;
+  emphasized?: boolean;
+}) {
+  return (
+    <div
+      className={[
+        "rounded-[1.4rem] px-5 py-5 sm:px-6 sm:py-6",
+        emphasized
+          ? "bg-white/[0.04] shadow-[inset_0_0_0_1px_rgba(45,212,191,0.12)]"
+          : "bg-transparent",
+      ].join(" ")}
+    >
+      <div className="text-[0.7rem] font-semibold tracking-[0.18em] text-accent uppercase">
+        {step}
+      </div>
+      <h3 className="mt-3 font-display text-[1.28rem] font-semibold tracking-tight text-sand sm:text-[1.45rem]">
+        {title}
+      </h3>
+      <p className="mt-3 max-w-[20rem] text-sm leading-6 text-slate-300/78 sm:text-[0.96rem]">
+        {summary}
+      </p>
+    </div>
+  );
+}
+
+function SearchIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
+      <path d="M11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4C7.13401 4 4 7.13401 4 11C4 14.866 7.13401 18 11 18Z" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M20 20L16.65 16.65" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function ShieldIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
+      <path d="M12 3.75L18.75 6.75V11.43C18.75 15.75 15.78 19.74 12 20.75C8.22 19.74 5.25 15.75 5.25 11.43V6.75L12 3.75Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M9.25 12.25L11.15 14.15L14.9 10.4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ChecklistIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
+      <path d="M8 7.5H18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M8 12H18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M8 16.5H14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M4.5 7.5L5.5 8.5L7 6.75" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M4.5 12L5.5 13L7 11.25" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M4.5 16.5L5.5 17.5L7 15.75" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function SignalIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
+      <path d="M4 16.75L8 12.75L11 15.75L17.25 9.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M14.75 9.5H17.25V12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M4 20H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
 
 export default function Home() {
   return (
     <>
       <section className="grain flex min-h-[calc(100svh-88px)] items-center border-b border-[#1E293B]">
-        <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-6 py-18 sm:gap-16 sm:px-8 sm:py-20 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:px-12 lg:py-24 xl:gap-16 xl:py-28">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-14 sm:gap-12 sm:px-8 sm:py-18 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:px-12 lg:py-24 xl:gap-16 xl:py-28">
           <div className="max-w-3xl space-y-8 lg:basis-[46%] lg:max-w-[40rem] xl:max-w-[42rem]">
             <span className="eyebrow-chip inline-flex rounded-full px-4.5 py-1.5 text-[0.72rem] font-medium tracking-[0.14em] uppercase sm:px-5">
-              Platform-Enabled QA Delivery
+              Release-Focused Quality Engineering
             </span>
             <div className="space-y-5">
               <h1 className="headline-balance max-w-5xl font-display text-4xl leading-[1.02] font-semibold tracking-tight text-sand sm:text-5xl lg:text-[4.5rem] xl:text-[5rem]">
                 Provide your URL. We&apos;ll find the cracks before your users do.
               </h1>
               <p className="copy-balance max-w-3xl text-base leading-7 text-muted sm:text-[1.1rem] sm:leading-8 lg:max-w-[34rem]">
-                SmartQA helps teams uncover release-critical issues early,
-                strengthen coverage, and ship with more confidence.
+                Independent assessment, focused validation, and clear
+                recommendations to help teams release with confidence.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -78,85 +263,136 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="w-full lg:-mr-4 lg:basis-[62%] lg:-translate-y-3 xl:-mr-6 xl:max-w-[68rem]">
+          <div className="w-full lg:-mr-4 lg:basis-[62%] lg:-translate-y-6 xl:-mr-6 xl:max-w-[68rem]">
             <HeroVisual className="w-full" />
           </div>
         </div>
       </section>
 
-      <section className="section-wash border-b border-[#1E293B]">
-        <div className="mx-auto flex max-w-7xl flex-wrap gap-3.5 px-6 py-10 text-sm text-muted sm:px-8 sm:py-12 lg:px-12">
-          {[
-            "Built Around Release Risk",
-            "Quality Engineering, Not Test Staffing",
-            "Clearer Signal Before Release",
-            "Faster Path To Useful QA",
-          ].map((item) => (
-            <div key={item} className="proof-pill rounded-full px-5 py-3.5">
-              {item}
+      <section className="border-b border-[#1E293B] bg-[#08111D]">
+        <div className="mx-auto max-w-7xl px-6 py-18 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
+          <div className="grid gap-10 lg:grid-cols-[0.76fr_1.24fr] lg:items-center lg:gap-12 xl:gap-16">
+            <div className="max-w-[30rem]">
+              <p className="text-sm font-semibold tracking-[0.22em] text-accent uppercase">
+                Problem Recognition
+              </p>
+              <h2 className="mt-5 font-display text-3xl font-semibold tracking-tight text-sand sm:text-4xl lg:text-[3.55rem] lg:leading-[1.06]">
+                You don't have a bug problem. You have a visibility problem.
+              </h2>
+              <p className="mt-7 max-w-[24rem] text-base leading-8 text-slate-300/78 sm:text-[1.05rem]">
+                The biggest risks are usually the ones nobody sees before release.
+              </p>
             </div>
-          ))}
+
+            <div className="relative mx-auto w-full max-w-[56rem] lg:max-w-none">
+              <div
+                aria-hidden
+                className="absolute inset-x-[10%] top-[3%] h-20 rounded-full bg-white/[0.05] blur-[70px]"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-x-[12%] bottom-[4%] h-20 rounded-full bg-[#2DD4BF]/10 blur-[82px]"
+              />
+              <Image
+                src="/Problem%20Recognition%20_RR.png"
+                alt="Release readiness assessment board showing weak release confidence, exposed risk distribution, and open issues"
+                width={1536}
+                height={1024}
+                className="relative z-10 h-auto w-[106%] max-w-none -translate-x-[3%] sm:w-[104%] sm:-translate-x-[2%] lg:w-[108%] lg:-translate-x-[4%]"
+                priority={false}
+              />
+            </div>
+          </div>
+
+          <div className="mt-12 flex items-center gap-4 sm:mt-14">
+            <div className="h-px flex-1 bg-[#2DD4BF]/22" />
+            <p className="shrink-0 text-[0.76rem] font-semibold tracking-[0.18em] text-accent uppercase">
+              Common Challenges We See
+            </p>
+            <div className="h-px flex-1 bg-[#2DD4BF]/22" />
+          </div>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4 xl:gap-4">
+            {problemRecognitionCards.map((card) => (
+              <div
+                key={card.title}
+                className="relative min-h-[18rem] overflow-hidden rounded-[1.7rem] border border-white/8 bg-[#0B1220]/60 shadow-[0_18px_42px_rgba(2,8,23,0.22)] sm:min-h-[19rem] xl:min-h-[20.5rem]"
+              >
+                <Image
+                  src={card.src}
+                  alt={card.title}
+                  width={768}
+                  height={768}
+                  className="h-full w-full object-cover object-center scale-[1.16] sm:scale-[1.2] xl:scale-[1.28]"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-28">
-        <SectionHeading
-          eyebrow="Services"
-          title="Quality engineering services built for release confidence."
-          description="From automation engineering and release assurance to risk analysis and release intelligence, SmartQA brings expert judgment into the moments where quality matters most."
-        />
-        <div className="mt-14 grid gap-5 lg:grid-cols-2">
-          {services.map((service) => (
-            <Link
-              key={service.slug}
-              href={`/services/${service.slug}`}
-              className="surface-card-soft group rounded-[1.8rem] p-5 transition hover:-translate-y-0.5 hover:border-accent/20 sm:rounded-[2rem] sm:p-6"
-            >
-              <div className="mb-5 flex h-18 w-18 items-center justify-center rounded-[1.35rem] bg-[#0B1220]/64">
-                <Image
-                  src={serviceVisuals[service.slug]}
-                  alt=""
-                  width={96}
-                  height={96}
-                  className="h-auto w-full max-w-[5rem] object-contain"
-                />
-              </div>
-              <p className="text-sm font-semibold tracking-[0.16em] text-accent uppercase">
-                {service.shortLabel}
-              </p>
-              <h2 className="mt-3 font-display text-[1.9rem] font-semibold tracking-tight text-sand sm:text-[2.1rem]">
-                {service.title}
-              </h2>
-              <p className="mt-3 max-w-xl text-[0.98rem] leading-7 text-muted sm:text-base">
-                {service.summary}
-              </p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {service.outcomes.slice(0, 3).map((outcome) => (
-                  <span key={outcome} className="tag-pill rounded-full px-3 py-1 text-xs text-muted">
-                    {outcome}
-                  </span>
-                ))}
-              </div>
-            </Link>
-          ))}
+      <section className="section-wash border-b border-[#1E293B]">
+        <div className="mx-auto max-w-7xl px-6 py-18 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
+              Simple Solution
+            </p>
+            <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-sand sm:text-4xl lg:text-[3.1rem] lg:leading-[1.08]">
+              SmartQA stays simple: start with the URL, then get the signal you actually need.
+            </h2>
+          </div>
+
+          <div className="surface-card-soft mt-10 rounded-[2rem] border border-white/8 p-3 sm:p-4 lg:p-5">
+            <div className="grid gap-2 lg:grid-cols-3 lg:gap-0">
+              {simpleSolutionSteps.map((item, index) => (
+                <div
+                  key={item.step}
+                  className={[
+                    index > 0 ? "lg:border-l lg:border-white/8" : "",
+                    index > 0 ? "border-t border-white/8 lg:border-t-0" : "",
+                  ].join(" ")}
+                >
+                  <SolutionStep
+                    step={item.step}
+                    title={item.title}
+                    summary={item.summary}
+                    emphasized={index === 1}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className="mt-12 flex justify-start">
-          <Link
-            href="/services"
-            className="btn-secondary inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold text-sand transition"
-          >
-            Explore Services
-          </Link>
+      </section>
+
+      <section className="section-wash border-b border-[#1E293B]">
+        <div className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-28">
+          <SectionHeading
+            eyebrow="What You Receive"
+            title="Clear deliverables before you commit to the next move."
+            description="SmartQA delivers evidence, findings, and recommendations your team can use to make better release decisions faster."
+          />
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {whatYouReceiveCards.map((card) => (
+              <OutcomeCard
+                key={card.title}
+                icon={<card.icon />}
+                title={card.title}
+                description={card.description}
+                preview={card.preview}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
       <section id="how-we-work" className="border-y border-[#1E293B] bg-[#0F172A]">
+        <SectionHeading
+          eyebrow="How We Work"
+          title="From URL to release confidence"
+          description="SmartQA combines expert QA assessment, focused validation, and clear findings to help teams understand release risk and act with confidence."
+        />
         <div className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-28">
-          <SectionHeading
-            eyebrow="How We Work"
-            title="Platform-enabled delivery built around release confidence."
-            description="SmartQA combines expert QA execution with proprietary internal delivery infrastructure to surface risk earlier, keep coverage aligned, and make release signal easier to trust."
-          />
           <div className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <div className="flex justify-center lg:justify-start">

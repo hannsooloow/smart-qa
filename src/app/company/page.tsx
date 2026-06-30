@@ -4,7 +4,7 @@ import { operatingPrinciples } from "@/lib/site-data";
 export const metadata = {
   title: "Company",
   description:
-    "Learn how SmartQA combines premium QA services, operational maturity, and proprietary internal delivery infrastructure.",
+    "Learn how SmartQA combines premium QA services, operational maturity, and release-focused quality engineering.",
 };
 
 export default function CompanyPage() {
@@ -13,7 +13,7 @@ export default function CompanyPage() {
       <PageHero
         eyebrow="Company"
         title="SmartQA is a quality engineering partner built around release confidence."
-        description="SmartQA helps engineering teams strengthen coverage, sharpen QA signal, and improve release decisions through expert execution and proprietary internal delivery infrastructure."
+        description="SmartQA helps engineering teams strengthen coverage, sharpen QA signal, and improve release decisions through expert quality engineering support."
         primaryCta={{ href: "/contact", label: "Book a Consultation" }}
         secondaryCta={{ href: "/#how-we-work", label: "Explore How We Work" }}
       />

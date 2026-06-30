@@ -1,0 +1,156 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Issues surface after release</title>
+  <desc id="desc">A sharp dark SmartQA diagnostic card showing that issues surface after release, with a warning icon, release path and red issue marker.</desc>
+
+  <defs>
+    <linearGradient id="cardFill" x1="260" y1="118" x2="944" y2="832" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172232"/>
+      <stop offset="0.52" stop-color="#0D1724"/>
+      <stop offset="1" stop-color="#080E17"/>
+    </linearGradient>
+
+    <linearGradient id="innerFill" x1="286" y1="146" x2="916" y2="806" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#141F2E"/>
+      <stop offset="0.55" stop-color="#0B1420"/>
+      <stop offset="1" stop-color="#070C14"/>
+    </linearGradient>
+
+    <linearGradient id="edge" x1="250" y1="112" x2="950" y2="834" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3A4657"/>
+      <stop offset="0.42" stop-color="#263244"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+
+    <linearGradient id="innerEdge" x1="282" y1="142" x2="918" y2="810" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#455268" stop-opacity="0.68"/>
+      <stop offset="0.5" stop-color="#263244" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#0F172A" stop-opacity="0.72"/>
+    </linearGradient>
+
+    <linearGradient id="red" x1="332" y1="168" x2="918" y2="734" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF7A83"/>
+      <stop offset="0.55" stop-color="#FF5362"/>
+      <stop offset="1" stop-color="#EF3347"/>
+    </linearGradient>
+
+    <linearGradient id="pathLine" x1="318" y1="650" x2="790" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9AA8BA" stop-opacity="0.25"/>
+      <stop offset="0.16" stop-color="#E5EAF1" stop-opacity="0.95"/>
+      <stop offset="0.62" stop-color="#C5CEDB" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#EEF2F8" stop-opacity="0.82"/>
+    </linearGradient>
+
+    <radialGradient id="alertTint" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(815 625) rotate(90) scale(128 170)">
+      <stop stop-color="#EF3347" stop-opacity="0.18"/>
+      <stop offset="0.62" stop-color="#EF3347" stop-opacity="0.045"/>
+      <stop offset="1" stop-color="#EF3347" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="subtleTopLight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(414 160) rotate(90) scale(220 360)">
+      <stop stop-color="#64748B" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#64748B" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="shadow" x="220" y="90" width="760" height="780" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#020617" flood-opacity="0.48"/>
+    </filter>
+
+    <filter id="smallShadow" x="0" y="0" width="1200" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="2" stdDeviation="1" flood-color="#020617" flood-opacity="0.82"/>
+    </filter>
+
+    <filter id="verySoftRed" x="690" y="490" width="290" height="290" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 1  0 1 0 0 0.12  0 0 1 0 0.18  0 0 0 0.30 0" result="colored"/>
+      <feBlend in="SourceGraphic" in2="colored" mode="normal"/>
+    </filter>
+
+    <clipPath id="clip">
+      <rect x="254" y="114" width="690" height="720" rx="58"/>
+    </clipPath>
+  </defs>
+
+  <!-- Transparent outside area intentionally left empty -->
+
+  <!-- Card shell -->
+  <g filter="url(#shadow)">
+    <rect x="254" y="114" width="690" height="720" rx="58" fill="url(#cardFill)"/>
+    <rect x="254" y="114" width="690" height="720" rx="58" stroke="url(#edge)" stroke-width="2.2"/>
+  </g>
+
+  <rect x="281" y="142" width="636" height="666" rx="45" fill="url(#innerFill)" stroke="url(#innerEdge)" stroke-width="2"/>
+
+  <!-- Subtle interior texture, reduced glow -->
+  <g clip-path="url(#clip)">
+    <rect x="254" y="114" width="690" height="720" fill="url(#subtleTopLight)"/>
+    <rect x="254" y="114" width="690" height="720" fill="url(#alertTint)"/>
+    <path d="M308 132V816" stroke="#FFFFFF" stroke-opacity="0.025"/>
+    <path d="M424 132V816" stroke="#FFFFFF" stroke-opacity="0.03"/>
+    <path d="M594 132V816" stroke="#FFFFFF" stroke-opacity="0.035"/>
+    <path d="M744 132V816" stroke="#FFFFFF" stroke-opacity="0.026"/>
+    <path d="M880 132V816" stroke="#FFFFFF" stroke-opacity="0.022"/>
+  </g>
+
+  <!-- Top warning icon -->
+  <g filter="url(#smallShadow)">
+    <circle cx="370" cy="212" r="49" fill="#121B29" stroke="url(#red)" stroke-width="4"/>
+    <line x1="370" y1="184" x2="370" y2="221" stroke="#F8FAFC" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="370" cy="241" r="5.6" fill="#F8FAFC"/>
+  </g>
+
+  <!-- Number -->
+  <text x="462" y="219" fill="#FF5C6B" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="38" font-weight="800" letter-spacing="1.5" filter="url(#smallShadow)">01</text>
+
+  <!-- Title -->
+  <text x="462" y="306" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="-1.2" filter="url(#smallShadow)">Issues surface</text>
+  <text x="462" y="361" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="-1.2" filter="url(#smallShadow)">after release</text>
+
+  <!-- Body -->
+  <text x="327" y="444" fill="#C6D0DD" fill-opacity="0.94" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="34" font-weight="500" letter-spacing="-0.5" filter="url(#smallShadow)">Bugs and gaps appear in</text>
+  <text x="327" y="500" fill="#C6D0DD" fill-opacity="0.94" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="34" font-weight="500" letter-spacing="-0.5" filter="url(#smallShadow)">production, not in testing.</text>
+
+  <!-- Release path, sharper and cleaner -->
+  <g>
+    <path d="M326 665 C368 610, 416 616, 466 635 C512 653, 552 663, 603 653 C650 644, 690 641, 735 647 C758 650, 778 644, 798 628"
+          stroke="#020617" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+    <path d="M326 665 C368 610, 416 616, 466 635 C512 653, 552 663, 603 653 C650 644, 690 641, 735 647 C758 650, 778 644, 798 628"
+          stroke="url(#pathLine)" stroke-width="4.2" stroke-linecap="round" stroke-dasharray="10 10"/>
+
+    <!-- first pin -->
+    <line x1="327" y1="609" x2="327" y2="717" stroke="#94A3B8" stroke-opacity="0.36" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="327" cy="666" r="16" fill="#0A101A" stroke="#334155" stroke-width="5"/>
+    <circle cx="327" cy="666" r="9.2" fill="#FF5261"/>
+
+    <!-- middle pins -->
+    <circle cx="432" cy="629" r="17" fill="#0A101A" stroke="#334155" stroke-width="5"/>
+    <circle cx="432" cy="629" r="9.5" fill="#FF6973"/>
+    <circle cx="573" cy="655" r="16" fill="#0A101A" stroke="#334155" stroke-width="5"/>
+    <circle cx="573" cy="655" r="9" fill="#FF6973"/>
+    <circle cx="706" cy="650" r="16" fill="#0A101A" stroke="#334155" stroke-width="5"/>
+    <circle cx="706" cy="650" r="9" fill="#FF6973"/>
+  </g>
+
+  <!-- Big alert, sharper with reduced glow -->
+  <g filter="url(#verySoftRed)">
+    <circle cx="822" cy="633" r="65" fill="#EF3347"/>
+    <circle cx="822" cy="633" r="65" stroke="#FF7A83" stroke-opacity="0.46" stroke-width="2"/>
+    <line x1="822" y1="581" x2="822" y2="623" stroke="#F8FAFC" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="822" cy="660" r="6" fill="#F8FAFC"/>
+  </g>
+
+  <!-- Burst rays, no blur -->
+  <g stroke="#FF5362" stroke-width="5" stroke-linecap="round">
+    <line x1="822" y1="532" x2="822" y2="493"/>
+    <line x1="822" y1="734" x2="822" y2="773"/>
+    <line x1="721" y1="633" x2="682" y2="633"/>
+    <line x1="923" y1="633" x2="962" y2="633"/>
+    <line x1="751" y1="562" x2="720" y2="531"/>
+    <line x1="893" y1="704" x2="924" y2="735"/>
+    <line x1="893" y1="562" x2="924" y2="531"/>
+    <line x1="751" y1="704" x2="720" y2="735"/>
+    <line x1="778" y1="540" x2="762" y2="508"/>
+    <line x1="866" y1="726" x2="882" y2="758"/>
+    <line x1="733" y1="589" x2="700" y2="575"/>
+    <line x1="911" y1="677" x2="944" y2="691"/>
+  </g>
+</svg>

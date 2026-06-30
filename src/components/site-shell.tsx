@@ -282,10 +282,10 @@ export function SiteShell({ children }: { children: ReactNode }) {
             </div>
             <div className="space-y-4 lg:pt-1.5">
               <div className="text-xs font-semibold tracking-[0.14em] text-accent uppercase">
-                Platform-Enabled Delivery
+                Release Confidence
               </div>
               <p className="max-w-[18rem] text-sm leading-6 text-slate-300/78">
-                SmartQA uses proprietary internal infrastructure to improve release visibility, execution consistency, and QA signal behind the scenes.
+                SmartQA helps teams improve release visibility, execution confidence, and QA signal through expert quality engineering support.
               </p>
               <div className="flex flex-col gap-2.5 text-sm font-medium text-sand">
                 <Link href="/#how-we-work" className="footer-link footer-link-strong">
