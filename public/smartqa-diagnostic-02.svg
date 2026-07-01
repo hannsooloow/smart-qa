@@ -1,0 +1,44 @@
+<svg width="640" height="360" viewBox="160 90 340 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="amber-glow-02" x="214" y="72" width="230" height="220" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12" />
+    </filter>
+  </defs>
+
+  <g opacity="0.46">
+    <path d="M314 92C336 92 354 100 367 115" stroke="#F4BC61" stroke-width="3" stroke-linecap="round" />
+    <path d="M388 138C392 151 394 165 394 181" stroke="#F4BC61" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <g filter="url(#amber-glow-02)" opacity="0.36">
+    <path d="M314 92C358 92 394 128 394 174C394 220 358 256 314 256" stroke="#F2B24A" stroke-width="16" stroke-linecap="round" stroke-dasharray="118 999" />
+  </g>
+
+  <path d="M314 92C358 92 394 128 394 174C394 220 358 256 314 256" stroke="#F1B452" stroke-width="4.6" stroke-linecap="round" stroke-dasharray="116 999" />
+  <path d="M252 108C229 126 216 149 216 178" stroke="#7A8795" stroke-opacity="0.54" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="22 11" />
+  <path d="M246 236C262 248 285 256 314 256" stroke="#7A8795" stroke-opacity="0.48" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="20 11" />
+
+  <circle cx="314" cy="174" r="47" stroke="#D3DAE2" stroke-opacity="0.2" stroke-width="1.8" stroke-dasharray="8 12" />
+
+  <circle cx="314" cy="174" r="16" stroke="#F5C16D" stroke-width="3" fill="none" />
+  <circle cx="314" cy="174" r="4.2" fill="#F5C16D" fill-opacity="0.96" />
+
+  <circle cx="230" cy="246" r="16" stroke="#AAB6C4" stroke-opacity="0.74" stroke-width="2.5" fill="none" />
+  <circle cx="422" cy="244" r="13.8" stroke="#AAB6C4" stroke-opacity="0.42" stroke-width="2.3" fill="none" />
+  <path d="M292 238L258 264" stroke="#7E8B99" stroke-opacity="0.58" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="5 8" />
+  <path d="M338 238L396 260" stroke="#7E8B99" stroke-opacity="0.46" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="5 8" />
+
+  <g stroke="#8895A2" stroke-opacity="0.34" stroke-width="1.8" stroke-linecap="round">
+    <path d="M204 292H272" stroke-dasharray="4 9" />
+    <path d="M388 292H450" stroke-dasharray="4 9" />
+    <path d="M296 266L278 292" stroke-dasharray="4 9" />
+    <path d="M354 262L370 288" stroke-dasharray="4 9" />
+  </g>
+
+  <g opacity="0.45">
+    <path d="M192 196C213 191 230 196 241 209" stroke="#687686" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="4 9" />
+    <path d="M418 204C434 197 453 201 470 216" stroke="#687686" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="4 9" />
+  </g>
+
+  <circle cx="450" cy="146" r="2.4" fill="#2DD4BF" fill-opacity="0.24" />
+</svg>

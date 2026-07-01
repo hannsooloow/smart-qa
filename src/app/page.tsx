@@ -39,22 +39,48 @@ const featureHighlights = [
 
 const problemRecognitionCards = [
   {
+    id: "01",
+    accent: "#FF6B6F",
+    tint: "rgba(255,107,111,0.14)",
+    icon: "alert",
+    illustrationClassName: "translate-x-[2%] translate-y-[10px] scale-[1.08] md:-translate-y-[24px]",
     title: "Issues surface after release",
-    src: "/Problem Recognition_IGM_01.png",
+    description: "Bugs and gaps appear in production, not in testing.",
+    src: "/smartqa-diagnostic-01.svg",
   },
   {
+    id: "02",
+    accent: "#F1B452",
+    tint: "rgba(241,180,82,0.14)",
+    icon: "question",
+    illustrationClassName: "translate-y-[13px] scale-[1.1] md:-translate-y-[28px]",
     title: "Unclear release readiness",
-    src: "/Problem Recognition_IGM_02.png",
+    description: "No one knows what's truly covered or what's still risky.",
+    src: "/smartqa-diagnostic-02.svg",
   },
   {
+    id: "03",
+    accent: "#F2C65E",
+    tint: "rgba(242,198,94,0.14)",
+    icon: "shield",
+    illustrationClassName: "-translate-x-[7%] translate-y-[9px] scale-[1.08] md:-translate-y-[26px]",
     title: "Automation lacks trust",
-    src: "/Problem Recognition_IGM_03.png",
+    description: "Existing automation is brittle, noisy, or doesn't reflect real risk.",
+    src: "/smartqa-diagnostic-03.svg",
   },
   {
+    id: "04",
+    accent: "#2DD4BF",
+    tint: "rgba(45,212,191,0.14)",
+    icon: "eye",
+    illustrationClassName: "translate-y-[10px] scale-[1.08] md:-translate-y-[22px]",
     title: "Visibility is fragmented",
-    src: "/Problem Recognition_IGM_04.png",
+    description: "Teams rely on disconnected tools and incomplete data.",
+    src: "/smartqa-diagnostic-04.svg",
   },
 ] as const;
+
+type ProblemRecognitionIcon = (typeof problemRecognitionCards)[number]["icon"];
 
 const simpleSolutionSteps = [
   {
@@ -152,6 +178,129 @@ function OutcomeCard({
         {description}
       </p>
       <div className="mt-6">{preview}</div>
+    </div>
+  );
+}
+
+function ProblemRecognitionIconGlyph({
+  icon,
+}: {
+  icon: ProblemRecognitionIcon;
+}) {
+  if (icon === "alert") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7" aria-hidden="true">
+        <path d="M12 5.3V13.9" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+        <circle cx="12" cy="18.1" r="1.7" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  if (icon === "question") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7" aria-hidden="true">
+        <path d="M9.15 8.95C9.15 6.95 10.76 5.52 12.95 5.52C15.01 5.52 16.54 6.84 16.54 8.73C16.54 10.1 15.84 10.95 14.4 11.79C13.08 12.56 12.46 13.22 12.46 14.6" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="12.34" cy="18.36" r="1.6" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  if (icon === "shield") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7" aria-hidden="true">
+        <path d="M12 4.2L18.6 7.04V11.64C18.6 15.66 15.8 19.33 12 20.35C8.2 19.33 5.4 15.66 5.4 11.64V7.04L12 4.2Z" stroke="currentColor" strokeWidth="2.05" strokeLinejoin="round" />
+        <path d="M9.42 12.1L11.25 13.93L14.82 10.36" stroke="currentColor" strokeWidth="2.05" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7" aria-hidden="true">
+      <path d="M3.6 12C5.78 8.4 8.88 6.55 12 6.55C15.12 6.55 18.22 8.4 20.4 12C18.22 15.6 15.12 17.45 12 17.45C8.88 17.45 5.78 15.6 3.6 12Z" stroke="currentColor" strokeWidth="2.05" strokeLinejoin="round" />
+      <circle cx="12" cy="12" r="2.65" stroke="currentColor" strokeWidth="2.05" />
+    </svg>
+  );
+}
+
+function ProblemRecognitionCard({
+  id,
+  accent,
+  tint,
+  icon,
+  illustrationClassName,
+  title,
+  description,
+  src,
+}: {
+  id: string;
+  accent: string;
+  tint: string;
+  icon: ProblemRecognitionIcon;
+  illustrationClassName: string;
+  title: string;
+  description: string;
+  src: string;
+}) {
+  return (
+    <div className="relative min-h-[23rem] overflow-hidden rounded-[1.75rem] border border-[rgba(148,163,184,0.2)] bg-[#0B1220] p-6 shadow-[0_16px_34px_rgba(2,8,23,0.2)] before:pointer-events-none before:absolute before:inset-0 before:rounded-[1.75rem] before:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.03)] md:min-h-[24.5rem] xl:min-h-[25.75rem] xl:p-[26px]">
+      <div
+        aria-hidden
+        className="absolute inset-[1px] rounded-[calc(1.75rem-1px)] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.035),transparent_38%)]"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-[1px] rounded-[calc(1.75rem-1px)] border border-white/[0.04]"
+      />
+      <div className="relative z-10 flex h-full flex-col">
+        <div className="flex h-[54px] items-center gap-[14px]">
+          <div
+            className="relative flex h-[52px] w-[52px] items-center justify-center rounded-full border-2"
+            style={{
+              color: accent,
+              borderColor: accent,
+              backgroundColor: "rgba(255,255,255,0.01)",
+              boxShadow: `0 0 12px ${tint}`,
+            }}
+          >
+            <ProblemRecognitionIconGlyph icon={icon} />
+          </div>
+          <p
+            className="text-[1.58rem] font-bold tracking-[0.1em] uppercase sm:text-[1.72rem]"
+            style={{ color: accent }}
+          >
+            {id}
+          </p>
+        </div>
+
+        <div className="mt-4 max-w-[13.8rem]">
+          <h3 className="font-display text-[1.38rem] leading-[1.05] font-[650] tracking-tight text-sand sm:text-[1.54rem]">
+            {title}
+          </h3>
+          <p className="mt-[10px] max-w-[15.4rem] text-[0.93rem] leading-[1.58] text-slate-300/82 sm:text-[0.96rem]">
+            {description}
+          </p>
+        </div>
+
+        <div className="relative mt-3 h-[12.75rem] shrink-0 sm:h-[13.9rem] md:mt-[12px] md:h-[10.75rem] xl:h-[10.5rem]">
+          <div
+            aria-hidden
+            className="absolute inset-x-[10%] bottom-[8px] h-20 rounded-full bg-white/[0.05] blur-[62px]"
+          />
+          <div className={`absolute inset-x-0 top-0 h-full md:top-auto md:bottom-[-16px] ${illustrationClassName}`}>
+            <Image
+              src={src}
+              alt={title}
+              fill
+              sizes="(min-width: 1280px) 22vw, (min-width: 768px) 44vw, 100vw"
+              className="object-contain object-top md:object-bottom"
+            />
+          </div>
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 top-0 h-14 bg-[linear-gradient(180deg,rgba(11,18,32,0.24),rgba(11,18,32,0))]"
+          />
+        </div>
+      </div>
     </div>
   );
 }
@@ -269,7 +418,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-b border-[#1E293B] bg-[#08111D]">
+      <section id="problem-recognition" className="border-b border-[#1E293B] bg-[#08111D]">
         <div className="mx-auto max-w-7xl px-6 py-18 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-[0.76fr_1.24fr] lg:items-center lg:gap-12 xl:gap-16">
             <div className="max-w-[30rem]">
@@ -277,7 +426,7 @@ export default function Home() {
                 Problem Recognition
               </p>
               <h2 className="mt-5 font-display text-3xl font-semibold tracking-tight text-sand sm:text-4xl lg:text-[3.55rem] lg:leading-[1.06]">
-                You don't have a bug problem. You have a visibility problem.
+                You don&apos;t have a bug problem. You have a visibility problem.
               </h2>
               <p className="mt-7 max-w-[24rem] text-base leading-8 text-slate-300/78 sm:text-[1.05rem]">
                 The biggest risks are usually the ones nobody sees before release.
@@ -312,20 +461,19 @@ export default function Home() {
             <div className="h-px flex-1 bg-[#2DD4BF]/22" />
           </div>
 
-          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4 xl:gap-4">
+          <div id="problem-recognition-cards" className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4 xl:gap-4">
             {problemRecognitionCards.map((card) => (
-              <div
-                key={card.title}
-                className="relative min-h-[18rem] overflow-hidden rounded-[1.7rem] border border-white/8 bg-[#0B1220]/60 shadow-[0_18px_42px_rgba(2,8,23,0.22)] sm:min-h-[19rem] xl:min-h-[20.5rem]"
-              >
-                <Image
-                  src={card.src}
-                  alt={card.title}
-                  width={768}
-                  height={768}
-                  className="h-full w-full object-cover object-center scale-[1.16] sm:scale-[1.2] xl:scale-[1.28]"
-                />
-              </div>
+              <ProblemRecognitionCard
+                key={card.id}
+                id={card.id}
+                accent={card.accent}
+                tint={card.tint}
+                icon={card.icon}
+                illustrationClassName={card.illustrationClassName}
+                title={card.title}
+                description={card.description}
+                src={card.src}
+              />
             ))}
           </div>
         </div>
