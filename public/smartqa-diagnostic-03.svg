@@ -1,0 +1,40 @@
+<svg width="640" height="360" viewBox="12 90 620 305" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="signal-gradient-03" x1="36" y1="0" x2="524" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A8B5C4" stop-opacity="0.72" />
+      <stop offset="0.68" stop-color="#C4CCD6" stop-opacity="0.76" />
+      <stop offset="1" stop-color="#F2C65E" />
+    </linearGradient>
+    <filter id="warning-glow-03" x="436" y="136" width="176" height="162" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="11" />
+    </filter>
+  </defs>
+
+  <path d="M36 232C92 224 136 234 176 226C212 219 235 183 276 183C312 183 328 224 360 224C391 224 407 208 432 208C452 208 467 220 480 216C492 212 502 204 510 194" stroke="#798696" stroke-opacity="0.24" stroke-width="4.85" stroke-linecap="round" />
+  <path d="M36 230C92 222 136 232 176 224C212 217 235 181 276 181C312 181 328 222 360 222C391 222 407 206 432 206C452 206 467 218 480 214C492 210 502 202 510 192" stroke="#93A0AE" stroke-opacity="0.24" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 9" />
+
+  <path d="M36 230C92 222 136 232 176 224C212 217 235 181 276 181C312 181 328 222 360 222C391 222 407 206 432 206C452 206 467 218 480 214C492 210 502 202 510 192" stroke="url(#signal-gradient-03)" stroke-width="2.9" stroke-linecap="round" />
+
+  <g fill="#B8C4D2">
+    <circle cx="36" cy="230" r="5.8" />
+    <circle cx="176" cy="224" r="5.8" />
+    <circle cx="276" cy="181" r="6.7" />
+    <circle cx="360" cy="222" r="5.8" />
+    <circle cx="432" cy="206" r="5.5" />
+  </g>
+  <circle cx="480" cy="214" r="7.1" fill="#F0C65C" />
+
+  <g opacity="0.34" stroke="#8A96A3" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 8">
+    <path d="M326 191C341 195 353 206 365 219" />
+    <path d="M398 215C414 208 428 208 444 214" />
+    <path d="M450 214C467 214 482 219 496 228" />
+  </g>
+
+  <g filter="url(#warning-glow-03)" opacity="0.28">
+    <path d="M524 162L584 264H464L524 162Z" fill="#F1C75E" />
+  </g>
+
+  <path d="M524 174L568 250H480L524 174Z" stroke="#F1C75E" stroke-width="4" stroke-linejoin="round" fill="none" />
+  <rect x="520.6" y="203" width="6.8" height="22" rx="3.4" fill="#FFF6DE" />
+  <circle cx="524" cy="235.4" r="3.7" fill="#FFF6DE" />
+</svg>

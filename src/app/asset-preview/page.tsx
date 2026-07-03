@@ -2,6 +2,7 @@ import {
   ExecutiveDossier,
   ReleaseRiskEvidenceWall,
 } from "@/components/homepage-story-assets";
+import { DiagnosticIllustrationSystemPreview } from "@/components/diagnostic-illustration-preview";
 
 export const metadata = {
   title: "Asset Preview",
@@ -23,6 +24,21 @@ export default function AssetPreviewPage() {
             Release Risk Evidence Wall and Executive Dossier previewed in isolation before homepage integration.
           </p>
         </div>
+
+        <section className="mt-14">
+          <DiagnosticIllustrationSystemPreview />
+        </section>
+
+        <section className="mt-20 border-t border-[#1E293B]/80 pt-20">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
+              Existing Story Assets
+            </p>
+            <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-sand sm:text-4xl">
+              Supporting homepage narrative visuals
+            </h2>
+          </div>
+        </section>
 
         <section className="mt-14">
           <ReleaseRiskEvidenceWall />
