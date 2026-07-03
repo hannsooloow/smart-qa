@@ -1,0 +1,54 @@
+<svg width="640" height="360" viewBox="36 95 500 281" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="failure-glow-01" x="398" y="138" width="156" height="156" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="11" result="blur" />
+    </filter>
+    <filter id="node-glow-01" x="40" y="186" width="452" height="96" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="4.6" />
+    </filter>
+  </defs>
+
+  <g opacity="0.34" filter="url(#node-glow-01)">
+    <path d="M58 252C98 252 119 226 159 226C199 226 219 250 261 250C304 250 325 230 367 230C397 230 420 240 438 240" stroke="#A8B7C8" stroke-width="3.3" stroke-linecap="round" stroke-dasharray="3 9" />
+  </g>
+
+  <path d="M58 252C98 252 119 226 159 226C199 226 219 250 261 250C304 250 325 230 367 230C397 230 420 240 438 240" stroke="#BAC6D4" stroke-opacity="0.8" stroke-width="2.75" stroke-linecap="round" stroke-dasharray="5 8" />
+  <path d="M484 216C503 216 519 220 539 232" stroke="#F58C8B" stroke-opacity="0.42" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 8" />
+
+  <g opacity="0.88">
+    <circle cx="58" cy="252" r="5.8" fill="#B8C4D1" />
+    <circle cx="159" cy="226" r="6.8" fill="#AEBCCC" />
+    <circle cx="261" cy="250" r="6.2" fill="#B8C4D1" />
+    <circle cx="367" cy="230" r="6.5" fill="#B8C4D1" />
+    <circle cx="438" cy="240" r="6.9" fill="#BCC7D2" />
+  </g>
+
+  <g filter="url(#failure-glow-01)" opacity="0.9">
+    <circle cx="464" cy="216" r="44" fill="#FF5F62" fill-opacity="0.38" />
+  </g>
+
+  <circle cx="464" cy="216" r="29" fill="#FF5F62" />
+  <rect x="459.8" y="196.4" width="8.4" height="26.5" rx="4.2" fill="#FFF4F1" />
+  <circle cx="464" cy="234.4" r="4.7" fill="#FFF4F1" />
+
+  <g stroke="#FF7A7D" stroke-width="1.85" stroke-linecap="round" opacity="0.92">
+    <path d="M464 160V178" />
+    <path d="M464 254V272" />
+    <path d="M408 216H426" />
+    <path d="M502 216H520" />
+    <path d="M423 177L435 189" />
+    <path d="M493 243L505 255" />
+    <path d="M423 255L435 243" />
+    <path d="M493 189L505 177" />
+    <path d="M445 165L451 179" />
+    <path d="M477 253L483 267" />
+    <path d="M445 267L451 253" />
+    <path d="M477 179L483 165" />
+  </g>
+
+  <g fill="#FF8A8C" opacity="0.78">
+    <circle cx="525" cy="229" r="2.5" />
+    <circle cx="507" cy="211" r="2.1" />
+    <circle cx="533" cy="245" r="1.8" />
+  </g>
+</svg>

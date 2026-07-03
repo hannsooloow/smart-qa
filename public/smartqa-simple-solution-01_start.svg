@@ -1,0 +1,55 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="url-field-stroke" x1="130" y1="110" x2="472" y2="190" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A7B7C8" stop-opacity="0.42" />
+      <stop offset="1" stop-color="#2DD4BF" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="platform-top" x1="194" y1="278" x2="434" y2="278" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#162235" />
+      <stop offset="1" stop-color="#101A2B" />
+    </linearGradient>
+    <filter id="teal-glow-01" x="150" y="238" width="328" height="150" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18" />
+    </filter>
+  </defs>
+
+  <g opacity="0.42">
+    <path d="M320 184V246" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 8" />
+    <circle cx="320" cy="183" r="6" fill="#2DD4BF" fill-opacity="0.75" />
+  </g>
+
+  <rect x="122" y="108" width="356" height="84" rx="24" fill="#10192A" stroke="url(#url-field-stroke)" stroke-width="2" />
+  <rect x="147" y="132" width="252" height="38" rx="11" fill="#0C1321" stroke="rgba(173, 187, 201, 0.2)" />
+  <circle cx="175" cy="151" r="11" stroke="#9FB1C3" stroke-width="1.8" />
+  <path d="M170 151H180" stroke="#9FB1C3" stroke-width="1.6" stroke-linecap="round" />
+  <path d="M175 146C178 148 179 151 178 156" stroke="#9FB1C3" stroke-width="1.4" stroke-linecap="round" />
+  <path d="M175 146C172 148 171 151 172 156" stroke="#9FB1C3" stroke-width="1.4" stroke-linecap="round" />
+  <path d="M198 151H286" stroke="#95A6B7" stroke-opacity="0.72" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 11" />
+  <rect x="414" y="128" width="42" height="42" rx="12" fill="#143137" stroke="#2DD4BF" stroke-opacity="0.35" />
+  <path d="M428 149H442" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M437 144L442 149L437 154" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <g filter="url(#teal-glow-01)" opacity="0.28">
+    <ellipse cx="314" cy="338" rx="128" ry="28" fill="#2DD4BF" />
+  </g>
+
+  <g opacity="0.95">
+    <path d="M152 319L232 284L312 319L232 354L152 319Z" fill="#0D1626" stroke="rgba(143,161,178,0.2)" />
+    <path d="M408 319L488 284L568 319L488 354L408 319Z" fill="#0D1626" stroke="rgba(143,161,178,0.14)" />
+    <path d="M194 292L314 242L434 292L314 342L194 292Z" fill="url(#platform-top)" stroke="rgba(147,165,182,0.24)" />
+    <path d="M194 292V316L314 366V342L194 292Z" fill="#0A1321" stroke="rgba(147,165,182,0.12)" />
+    <path d="M434 292V316L314 366V342L434 292Z" fill="#112033" stroke="rgba(147,165,182,0.12)" />
+    <path d="M224 286L314 248L404 286L314 324L224 286Z" fill="#1C2E47" stroke="rgba(45,212,191,0.3)" />
+    <path d="M224 286V301L314 339V324L224 286Z" fill="#102138" />
+    <path d="M404 286V301L314 339V324L404 286Z" fill="#18314A" />
+  </g>
+
+  <circle cx="314" cy="286" r="25" stroke="#2DD4BF" stroke-width="2" />
+  <path d="M298 286H330" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" />
+  <path d="M314 270C319 274 320 280 319 287C318 293 314 297 314 302" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" />
+
+  <g opacity="0.34" stroke="#2DD4BF" stroke-width="1.7" stroke-linecap="round">
+    <path d="M232 347H396" />
+    <path d="M214 333H414" />
+  </g>
+</svg>
