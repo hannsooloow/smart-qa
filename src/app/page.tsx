@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { DeliverableFrame } from "@/components/deliverable-visuals";
 import { HeroVisual } from "@/components/hero-visual";
 import { SectionHeading } from "@/components/site-shell";
 import {
@@ -82,21 +81,33 @@ const problemRecognitionCards = [
 
 type ProblemRecognitionIcon = (typeof problemRecognitionCards)[number]["icon"];
 
-const simpleSolutionSteps = [
+const simpleSolutionCards = [
   {
-    step: "01",
+    step: "A",
+    accent: "#2DD4BF",
+    isActive: false,
     title: "You provide the URL",
-    summary: "Start with the product surface that needs a clearer release signal.",
+    description: "Start with the product surface that needs a clearer release signal.",
+    src: "/smartqa-simple-solution-01.png",
+    illustrationClassName: "-translate-y-[16px] scale-[1.04] lg:-translate-y-[24px]",
   },
   {
-    step: "02",
+    step: "B",
+    accent: "#2DD4BF",
+    isActive: true,
     title: "We assess release risk",
-    summary: "SmartQA reviews the journeys most likely to fail, break trust, or slow the release.",
+    description: "SmartQA reviews the journeys most likely to fail, break trust, or slow the release.",
+    src: "/smartqa-simple-solution-02.png",
+    illustrationClassName: "-translate-y-[20px] scale-[1.04] lg:-translate-y-[32px]",
   },
   {
-    step: "03",
+    step: "C",
+    accent: "#2DD4BF",
+    isActive: false,
     title: "You see what matters",
-    summary: "The result is a clearer view of exposure, priorities, and what deserves attention next.",
+    description: "The result is a clearer view of exposure, priorities, and what deserves attention next.",
+    src: "/smartqa-simple-solution-03.png",
+    illustrationClassName: "-translate-y-[16px] scale-[1.03] lg:-translate-y-[24px]",
   },
 ];
 
@@ -105,79 +116,143 @@ const whatYouReceiveCards = [
     title: "Clarity",
     description: "See where release confidence is weak and what needs attention first.",
     icon: SearchIcon,
-    preview: (
-      <DeliverableFrame
-        size="compact"
-        label="Executive Summary"
-        title="Confidence is weakest in checkout and account recovery."
-        footer="Top risks prioritized"
-      />
-    ),
+    summaryLabel: "Executive Summary",
+    summaryTitle: "Confidence is weakest in checkout and account recovery.",
+    summaryFooter: "Top risks prioritized",
+    summaryClassName: "md:left-6 md:bottom-6 md:w-[85%]",
+    illustrationSrc: "/wyr-01-clarity.png",
+    illustrationClassName:
+      "bottom-[2%] left-1/2 h-[12.5rem] w-[84%] -translate-x-1/2 sm:h-[13rem] sm:w-[80%] md:left-auto md:right-[-8%] md:top-[4%] md:bottom-auto md:h-[72%] md:w-[72%] md:translate-x-0 lg:right-[-10%] lg:top-[-2%] lg:h-[78%] lg:w-[78%]",
+    illustrationObjectPosition: "object-right-center",
+    illustrationEffectClassName: "opacity-95 [filter:drop-shadow(0_0_30px_rgba(45,212,191,0.12))]",
   },
   {
     title: "Evidence",
     description: "Receive findings grounded in real issues, exposure, and validation gaps.",
     icon: ShieldIcon,
-    preview: (
-      <DeliverableFrame
-        size="compact"
-        label="Findings Report"
-        title="Five ranked findings with severity and supporting evidence."
-        footer="Evidence linked to each issue"
-      />
-    ),
+    summaryLabel: "Findings Report",
+    summaryTitle: "Five ranked findings with severity and supporting evidence.",
+    summaryFooter: "Evidence linked to each issue",
+    summaryClassName: "md:left-6 md:bottom-6 md:w-[85%]",
+    illustrationSrc: "/wyr-02-evidence.png",
+    illustrationClassName:
+      "bottom-[1%] left-1/2 h-[12.25rem] w-[84%] -translate-x-1/2 sm:h-[12.75rem] sm:w-[80%] md:left-auto md:right-[-6%] md:top-[-2%] md:bottom-auto md:h-[68%] md:w-[68%] md:translate-x-0 lg:right-[-8%] lg:top-[-6%] lg:h-[74%] lg:w-[74%]",
+    illustrationObjectPosition: "object-right-top",
+    illustrationEffectClassName: "opacity-95 [filter:drop-shadow(0_0_24px_rgba(255,120,90,0.12))]",
   },
   {
     title: "Recommendations",
     description: "Get clear next steps to reduce risk and improve release readiness.",
     icon: ChecklistIcon,
-    preview: (
-      <DeliverableFrame
-        size="compact"
-        label="Recommendations Brief"
-        title="Recommended actions sequenced by impact and urgency."
-        footer="Immediate next actions defined"
-      />
-    ),
+    summaryLabel: "Recommendations Brief",
+    summaryTitle: "Recommended actions sequenced by impact and urgency.",
+    summaryFooter: "Immediate next actions defined",
+    summaryClassName: "md:left-6 md:bottom-6 md:w-[85%]",
+    illustrationSrc: "/wyr-03-recomendations.png",
+    illustrationClassName:
+      "bottom-[1%] left-1/2 h-[12rem] w-[82%] -translate-x-1/2 sm:h-[12.5rem] sm:w-[78%] md:left-auto md:right-[-5%] md:top-[5%] md:bottom-auto md:h-[70%] md:w-[70%] md:translate-x-0 lg:right-[-6%] lg:top-[2%] lg:h-[76%] lg:w-[76%]",
+    illustrationObjectPosition: "object-right-top",
+    illustrationEffectClassName: "opacity-95 [filter:drop-shadow(0_0_20px_rgba(45,212,191,0.08))]",
   },
   {
     title: "Ongoing Confidence",
     description: "Keep coverage strong and release decisions supported over time.",
     icon: SignalIcon,
-    preview: (
-      <DeliverableFrame
-        size="compact"
-        label="Release Readiness Review"
-        title="Readiness status, watch areas, and blockers before ship."
-        footer="Recurring release signal"
-      />
-    ),
+    summaryLabel: "Release Readiness Review",
+    summaryTitle: "Readiness status, watch areas, and blockers before ship.",
+    summaryFooter: "Recurring release signal",
+    summaryClassName: "md:left-6 md:bottom-6 md:w-[85%]",
+    illustrationSrc: "/wyr-04-ongoing-confidence.png",
+    illustrationClassName:
+      "bottom-[1%] left-1/2 h-[12rem] w-[82%] -translate-x-1/2 sm:h-[12.5rem] sm:w-[78%] md:left-auto md:right-[-4%] md:top-[2%] md:bottom-auto md:h-[66%] md:w-[66%] md:translate-x-0 lg:right-[-5%] lg:top-0 lg:h-[72%] lg:w-[72%]",
+    illustrationObjectPosition: "object-right-top",
+    illustrationEffectClassName: "opacity-95 [filter:drop-shadow(0_0_25px_rgba(45,212,191,0.10))]",
   },
 ] as const;
+
+function SummaryCheckIcon() {
+  return (
+    <svg viewBox="0 0 12 12" fill="none" className="h-3 w-3 shrink-0 text-[#2DD4BF]" aria-hidden="true">
+      <path d="M2.2 6.2L4.6 8.4L9.8 3.3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
 
 function OutcomeCard({
   icon,
   title,
   description,
-  preview,
+  summaryLabel,
+  summaryTitle,
+  summaryFooter,
+  summaryClassName,
+  illustrationSrc,
+  illustrationClassName,
+  illustrationObjectPosition,
+  illustrationEffectClassName,
 }: {
   icon: ReactNode;
   title: string;
   description: string;
-  preview: ReactNode;
+  summaryLabel: string;
+  summaryTitle: string;
+  summaryFooter: string;
+  summaryClassName: string;
+  illustrationSrc: string;
+  illustrationClassName: string;
+  illustrationObjectPosition: string;
+  illustrationEffectClassName: string;
 }) {
   return (
-    <div className="surface-card group rounded-[1.8rem] p-6 sm:rounded-[2rem] sm:p-7">
-      <div className="flex h-12 w-12 items-center justify-center rounded-[1rem] border border-[#2DD4BF]/20 bg-[#2DD4BF]/8 text-accent">
-        {icon}
+    <div className="surface-card group relative overflow-hidden rounded-[1.8rem] p-6 sm:rounded-[2rem] sm:p-7">
+      <div className="absolute inset-0 z-10 pointer-events-none">
+        <div aria-hidden className="absolute inset-x-[20%] top-[8%] h-28 rounded-full bg-[#2DD4BF]/10 blur-[72px] lg:top-[6%] lg:right-[2%] lg:left-auto lg:w-[46%]" />
+        <div aria-hidden className="absolute inset-y-0 left-0 w-[76%] bg-[linear-gradient(90deg,rgba(9,15,26,0.95),rgba(9,15,26,0.75),transparent)] md:w-[72%] lg:w-[64%]" />
       </div>
-      <h3 className="mt-5 font-display text-[1.5rem] font-semibold tracking-tight text-sand sm:text-[1.7rem]">
-        {title}
-      </h3>
-      <p className="mt-3 max-w-md text-sm leading-7 text-muted sm:text-[0.98rem]">
-        {description}
-      </p>
-      <div className="mt-6">{preview}</div>
+
+      <div className="absolute inset-0 z-20 pointer-events-none">
+        <div className={`absolute ${illustrationClassName}`}>
+          <Image
+            src={illustrationSrc}
+            alt=""
+            fill
+            sizes="(min-width: 1024px) 24vw, (min-width: 768px) 40vw, 82vw"
+            className={`object-contain ${illustrationObjectPosition} ${illustrationEffectClassName}`}
+          />
+        </div>
+      </div>
+
+      <div className="relative z-30 flex h-full min-h-[24rem] flex-col pb-[13.5rem] sm:min-h-[24.5rem] sm:pb-[14rem] md:min-h-[25rem] md:max-w-[46%] md:pb-[7.25rem] lg:min-h-[25.5rem] lg:max-w-[45%]">
+        <div className="flex flex-1 flex-col lg:pr-4">
+          <div className="flex h-18 w-18 items-center justify-center rounded-[1rem] border border-[#2DD4BF]/20 bg-[#2DD4BF]/8 text-accent">
+            {icon}
+          </div>
+          <h3 className="mt-5 font-display text-[1.5rem] font-semibold tracking-tight text-sand sm:text-[1.7rem]">
+            {title}
+          </h3>
+          <p className="mt-3 max-w-md text-sm leading-7 text-muted sm:text-[0.98rem]">
+            {description}
+          </p>
+        </div>
+      </div>
+
+      <div
+        className={[
+          "relative z-30 mt-6 max-w-[22rem] rounded-[18px] border border-[rgba(148,163,184,0.14)] bg-[linear-gradient(90deg,rgba(9,15,26,0.96),rgba(12,25,40,0.92))] px-4 py-[14px] shadow-[0_12px_28px_rgba(2,8,23,0.22)] before:pointer-events-none before:absolute before:inset-0 before:rounded-[18px] before:bg-[radial-gradient(circle_at_90%_20%,rgba(45,212,191,0.18),transparent_45%)] md:absolute md:min-h-[82px] md:max-w-none",
+          summaryClassName,
+        ].join(" ")}
+      >
+        <p className="relative text-[0.62rem] font-semibold tracking-[0.18em] text-accent uppercase">
+          {summaryLabel}
+        </p>
+        <p className="relative mt-2 text-sm leading-6 font-medium text-slate-200 md:whitespace-nowrap md:pr-12">
+          {summaryTitle}
+        </p>
+        <div className="relative mt-2 flex items-center gap-2 text-[0.72rem] leading-5 text-slate-400">
+          <SummaryCheckIcon />
+          <p>{summaryFooter}</p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -305,36 +380,119 @@ function ProblemRecognitionCard({
   );
 }
 
-function SolutionStep({
+function SimpleSolutionJourneyCard({
   step,
+  accent,
+  isActive = false,
   title,
-  summary,
-  emphasized = false,
+  description,
+  src,
+  illustrationClassName,
 }: {
   step: string;
+  accent: string;
+  isActive?: boolean;
   title: string;
-  summary: string;
-  emphasized?: boolean;
+  description: string;
+  src: string;
+  illustrationClassName: string;
 }) {
   return (
     <div
       className={[
-        "rounded-[1.4rem] px-5 py-5 sm:px-6 sm:py-6",
-        emphasized
-          ? "bg-white/[0.04] shadow-[inset_0_0_0_1px_rgba(45,212,191,0.12)]"
-          : "bg-transparent",
+        "relative min-h-[23rem] overflow-hidden rounded-[1.75rem] border p-6 before:pointer-events-none before:absolute before:inset-0 before:rounded-[1.75rem] sm:p-7 lg:min-h-[27.5rem] lg:p-7",
+        isActive
+          ? "border-[#2DD4BF]/45 bg-[#0D1626] shadow-[0_24px_54px_rgba(2,8,23,0.28),0_0_30px_rgba(45,212,191,0.10)] before:shadow-[inset_0_0_0_1px_rgba(45,212,191,0.12)]"
+          : "border-[rgba(148,163,184,0.14)] bg-[#0B1220] shadow-[0_18px_38px_rgba(2,8,23,0.18)] before:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.03)]",
       ].join(" ")}
     >
-      <div className="text-[0.7rem] font-semibold tracking-[0.18em] text-accent uppercase">
-        {step}
+      <div
+        aria-hidden
+        className={[
+          "absolute inset-[1px] rounded-[calc(1.75rem-1px)]",
+          isActive
+            ? "bg-[radial-gradient(circle_at_top,rgba(45,212,191,0.08),transparent_42%)]"
+            : "bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.03),transparent_42%)]",
+        ].join(" ")}
+      />
+      <div className="relative z-10 flex h-full flex-col">
+        <div className="flex items-center">
+          <span
+            className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#2DD4BF]/40 bg-[linear-gradient(180deg,rgba(18,27,40,0.92),rgba(10,16,26,0.92))] shadow-[0_0_18px_rgba(45,212,191,0.24)] before:absolute before:inset-[1px] before:rounded-full before:bg-[radial-gradient(circle_at_30%_28%,rgba(255,255,255,0.08),transparent_52%)]"
+            style={{ color: accent }}
+          >
+            <span className="relative translate-y-[0.5px] text-[1.35rem] leading-none font-bold tracking-[-0.02em] text-[#2DD4BF]">
+              {step}
+            </span>
+          </span>
+        </div>
+        <h3 className="mt-4 max-w-[13rem] font-display text-[1.42rem] leading-[1.06] font-[650] tracking-tight text-sand sm:text-[1.55rem] lg:text-[1.62rem]">
+          {title}
+        </h3>
+        <p className="mt-3 max-w-[17rem] text-[0.96rem] leading-[1.6] text-slate-300/83 sm:text-[0.98rem]">
+          {description}
+        </p>
+
+        <div className="relative mt-7 h-[12.75rem] sm:h-[13.4rem] lg:mt-8 lg:h-[15.25rem]">
+          <div
+            aria-hidden
+            className="absolute inset-x-[10%] bottom-[4%] h-18 rounded-full bg-[#2DD4BF]/8 blur-[60px]"
+          />
+          <div className={`absolute inset-x-0 bottom-0 top-0 ${illustrationClassName}`}>
+            <Image
+              src={src}
+              alt={title}
+              fill
+              sizes="(min-width: 1024px) 32vw, 100vw"
+              className="object-contain object-bottom"
+            />
+          </div>
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 top-0 h-12 bg-[linear-gradient(180deg,rgba(11,18,32,0.16),rgba(11,18,32,0))]"
+          />
+        </div>
       </div>
-      <h3 className="mt-3 font-display text-[1.28rem] font-semibold tracking-tight text-sand sm:text-[1.45rem]">
-        {title}
-      </h3>
-      <p className="mt-3 max-w-[20rem] text-sm leading-6 text-slate-300/78 sm:text-[0.96rem]">
-        {summary}
-      </p>
     </div>
+  );
+}
+
+function SimpleSolutionConnector({
+  emphasized = false,
+}: {
+  emphasized?: boolean;
+}) {
+  return (
+    <div className="hidden h-full items-center justify-center lg:flex lg:translate-y-[56px]" aria-hidden="true">
+      <div
+        className={`flex h-12 w-12 items-center justify-center rounded-full border ${emphasized ? "border-[#2DD4BF]/18" : "border-[#2DD4BF]/16"} bg-[linear-gradient(180deg,rgba(16,24,38,0.95),rgba(9,15,26,0.95))] shadow-[0_12px_30px_rgba(2,8,23,0.45),0_0_18px_rgba(45,212,191,0.18)]`}
+      >
+        <svg viewBox="0 0 24 24" fill="none" className="h-[14px] w-[14px]" aria-hidden="true">
+          <path
+            d="M5 12H17"
+            stroke="#2DD4BF"
+            strokeWidth="3.8"
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 7L17 12L12 17"
+            stroke="#2DD4BF"
+            strokeWidth="3.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+  );
+}
+
+function SimpleSolutionShieldGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3" aria-hidden="true">
+      <path d="M12 3.75L18.75 6.75V11.43C18.75 15.75 15.78 19.74 12 20.75C8.22 19.74 5.25 15.75 5.25 11.43V6.75L12 3.75Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M9.3 12.15L11.1 13.95L14.7 10.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }
 
@@ -481,34 +639,43 @@ export default function Home() {
 
       <section className="section-wash border-b border-[#1E293B]">
         <div className="mx-auto max-w-7xl px-6 py-18 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold tracking-[0.18em] text-accent uppercase">
+          <div className="max-w-[45rem]">
+            <p className="text-[0.78rem] font-semibold tracking-[0.2em] text-accent uppercase">
               Simple Solution
             </p>
-            <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-sand sm:text-4xl lg:text-[3.1rem] lg:leading-[1.08]">
-              SmartQA stays simple: start with the URL, then get the signal you actually need.
+            <h2 className="mt-3 font-display text-[2rem] font-semibold tracking-tight text-sand sm:text-[2.4rem] lg:text-[3.35rem] lg:leading-[1.06]">
+              SmartQA stays simple:
+              <br className="hidden sm:block" /> start with the URL, then get the signal you actually need.
             </h2>
+            <p className="mt-4 max-w-[34rem] text-[0.98rem] leading-7 text-slate-300/76 sm:text-[1.02rem] sm:leading-8">
+              A straightforward process that turns uncertainty into clarity so you can release with confidence.
+            </p>
           </div>
 
-          <div className="surface-card-soft mt-10 rounded-[2rem] border border-white/8 p-3 sm:p-4 lg:p-5">
-            <div className="grid gap-2 lg:grid-cols-3 lg:gap-0">
-              {simpleSolutionSteps.map((item, index) => (
-                <div
-                  key={item.step}
-                  className={[
-                    index > 0 ? "lg:border-l lg:border-white/8" : "",
-                    index > 0 ? "border-t border-white/8 lg:border-t-0" : "",
-                  ].join(" ")}
-                >
-                  <SolutionStep
-                    step={item.step}
-                    title={item.title}
-                    summary={item.summary}
-                    emphasized={index === 1}
-                  />
-                </div>
-              ))}
-            </div>
+          <div className="mt-7 grid gap-5 lg:mt-10 lg:grid-cols-[minmax(0,1fr)_72px_minmax(0,1fr)_72px_minmax(0,1fr)] lg:items-stretch lg:gap-0">
+            {simpleSolutionCards.map((item, index) => (
+              <div key={item.step} className="contents">
+                <SimpleSolutionJourneyCard
+                  step={item.step}
+                  accent={item.accent}
+                  isActive={item.isActive}
+                  title={item.title}
+                  description={item.description}
+                  src={item.src}
+                  illustrationClassName={item.illustrationClassName}
+                />
+                {index < simpleSolutionCards.length - 1 ? <SimpleSolutionConnector emphasized={index === 1} /> : null}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#2DD4BF]/40 bg-[linear-gradient(180deg,rgba(18,27,40,0.92),rgba(10,16,26,0.92))] text-[#2DD4BF] shadow-[0_0_12px_rgba(45,212,191,0.2)]">
+              <SimpleSolutionShieldGlyph />
+            </span>
+            <p className="text-center text-[0.82rem] leading-6 text-slate-300/72 sm:text-[0.88rem] lg:text-[0.92rem]">
+              Simple to start. Deep in insight. Built for <span className="text-accent">confident releases.</span>
+            </p>
           </div>
         </div>
       </section>
@@ -527,7 +694,14 @@ export default function Home() {
                 icon={<card.icon />}
                 title={card.title}
                 description={card.description}
-                preview={card.preview}
+                summaryLabel={card.summaryLabel}
+                summaryTitle={card.summaryTitle}
+                summaryFooter={card.summaryFooter}
+                illustrationSrc={card.illustrationSrc}
+                illustrationClassName={card.illustrationClassName}
+                illustrationObjectPosition={card.illustrationObjectPosition}
+                summaryClassName={card.summaryClassName}
+                illustrationEffectClassName={card.illustrationEffectClassName}
               />
             ))}
           </div>
